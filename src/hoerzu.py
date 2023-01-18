@@ -25,12 +25,17 @@ def scrape_hoerzu(callback: ScraperCallback):
         "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0",
     })
 
+    markups = [
+        session.get(f"{BASE_URL}/tv-programm/").text
+    ]
+
     response = session.get(
         f"{BASE_URL}/tv-programm/?getAdditionalPages=true",
     )
+    markups.extend(response.json()["data"])
 
-    for data in response.json()["data"]:
-        soup = to_soup(data)
+    for markup in markups:
+        soup = to_soup(markup)
 
         for channel_a in soup.find_all("a", {"class": "m-epg-card__channel-logo"}):
             channel_url = urllib.parse.urljoin(BASE_URL, channel_a.attrs["href"])
