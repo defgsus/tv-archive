@@ -19,6 +19,9 @@ jobs:
         run: |
           python main.py scrape > commit-message.md
           cat commit-message.md
+      - name: update statistics
+        run: |
+          python main.py write-stats
       - name: git config user
         run: |
           curl -s -u ${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }} https://api.github.com/users/${GITHUB_ACTOR} > ${GITHUB_ACTOR}.json
@@ -26,7 +29,7 @@ jobs:
           git config user.name "scrapy"
       - name: commit changes
         run: |
-          git add docs/
+          git add docs/ README.md
           git commit --allow-empty --file=commit-message.md
       - name: push changes
         run: |
