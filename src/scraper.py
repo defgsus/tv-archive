@@ -23,7 +23,13 @@ class Program:
     countries: Optional[List[str]] = None
 
 
-ScraperCallback = Callable[[Program], None]
+@dataclass
+class Error:
+    type: str
+    url: str
+
+
+ScraperCallback = Callable[[Union[Program, Error]], None]
 
 
 class Scraper:
@@ -31,6 +37,8 @@ class Scraper:
     def __init__(self, output_filename: Union[str, Path]):
         self.output_filename = Path(output_filename)
         self.output_file: Optional[IO[str]] = None
+        self._error_count = {}
+        self._channel_count = {}
 
     def __enter__(self):
         os.makedirs(self.output_filename.parent, exist_ok=True)
@@ -44,9 +52,36 @@ class Scraper:
     def scrape(self, scraper: Callable[[ScraperCallback], None]):
         scraper(self._callback)
 
-    def _callback(self, program: Program):
-        dump = json.dumps(vars(program), ensure_ascii=False, cls=_JsonEncoder)
-        self.output_file.write(dump + "\n")
+    def _callback(self, program: Union[Program, Error]):
+        if isinstance(program, Program):
+            dump = json.dumps(vars(program), ensure_ascii=False, cls=_JsonEncoder)
+            self.output_file.write(dump + "\n")
+
+            if program.channel not in self._channel_count:
+                self._channel_count[program.channel] = 0
+            self._channel_count[program.channel] += 1
+
+        else:
+            if program.type not in self._error_count:
+                self._error_count[program.type] = 0
+            self._error_count[program.type] += 1
+
+    def commit_message(self) -> str:
+        msg = f"update at {datetime.datetime.utcnow().isoformat()} UTC"
+
+        if self._error_count:
+            msg += "\n\n### ERRORS\n\n"
+            for key in sorted(self._error_count):
+                msg += f"{key}: {self._error_count[key]}\n"
+
+        if self._channel_count:
+            msg += "\n\n### programs per channel\n\n"
+            max_length = max(len(c) for c in self._channel_count) + 1
+            for key in sorted(self._channel_count):
+                channel = f"{key}:"
+                msg += f"{channel:{max_length}} {self._channel_count[key]}\n"
+
+        return msg
 
 
 class _JsonEncoder(json.JSONEncoder):

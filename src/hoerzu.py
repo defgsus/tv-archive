@@ -8,7 +8,7 @@ import urllib.parse
 import requests
 
 from .util import printe, to_soup
-from .scraper import Program, ScraperCallback
+from .scraper import Program, Error, ScraperCallback
 
 
 BASE_URL = "https://www.hoerzu.de"
@@ -42,11 +42,14 @@ def scrape_hoerzu(callback: ScraperCallback):
                 _scrape_hoerzu_channel(callback, session, channel_url, channel_name)
 
             except KeyboardInterrupt:
-                raise
+                return
+
             except:
                 printe(f"EXCEPTION in {channel_url}")
                 traceback.print_exc(file=sys.stderr)
+                callback(Error(type="channel", url=channel_url))
 
+            return
 
 
 def _scrape_hoerzu_channel(
@@ -108,9 +111,11 @@ def _scrape_hoerzu_channel(
 
         except KeyboardInterrupt:
             raise
+
         except:
             printe(f"EXCEPTION IN {channel_name}: {program_url}")
             traceback.print_exc(file=sys.stderr)
+            callback(Error(type="program-details", url=program_url))
             extra_info = {}
 
         callback(Program(
@@ -159,4 +164,3 @@ def _scrape_hoerzu_program(
         "countries": countries,
         "description": description,
     }
-

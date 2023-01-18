@@ -17,7 +17,8 @@ jobs:
           pip install -r requirements.txt
       - name: scraper
         run: |
-          python main.py scrape
+          python main.py scrape > commit-message.md
+          cat commit-message.md
       - name: git config user
         run: |
           curl -s -u ${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }} https://api.github.com/users/${GITHUB_ACTOR} > ${GITHUB_ACTOR}.json
@@ -26,7 +27,7 @@ jobs:
       - name: commit changes
         run: |
           git add docs/
-          git commit --allow-empty -m"scraper @ `date`"
+          git commit --allow-empty --file=commit-message.md
       - name: push changes
         run: |
           git push || (git pull --rebase --no-edit && git push)

@@ -2,6 +2,8 @@ import argparse
 import datetime
 from src.scraper import Scraper
 from src.hoerzu import scrape_hoerzu
+from src.util import printe
+
 
 today = datetime.date.today()
 DEFAULT_OUTPUT = f"docs/data/{today.year:04}/{today.month:02}/{today.strftime('%Y-%m-%d')}.ndjson"
@@ -25,9 +27,10 @@ def main(command: str, output: str):
         with Scraper(output_filename=output) as scraper:
 
             scraper.scrape(scrape_hoerzu)
+            print(scraper.commit_message())
 
     else:
-        print(f"Invalid command '{command}'")
+        printe(f"Invalid command '{command}'")
         exit(1)
 
 
