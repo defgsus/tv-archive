@@ -49,8 +49,6 @@ def scrape_hoerzu(callback: ScraperCallback):
                 traceback.print_exc(file=sys.stderr)
                 callback(Error(type="channel", url=channel_url))
 
-            return
-
 
 def _scrape_hoerzu_channel(
         callback: ScraperCallback,
