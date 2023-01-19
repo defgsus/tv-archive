@@ -8,29 +8,18 @@ from src.util import printe
 from src.access import iter_programs
 
 
-today = datetime.date.today()
-
-DEFAULT_OUTPUT = str(
-    DATA_PATH / f"{today.year:04}" / f"{today.month:02}" / f"{today.strftime('%Y-%m-%d')}.ndjson"
-)
-
-
 def parse_args() -> dict:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "command", type=str,
         choices=["scrape", "stats", "write-stats"],
     )
-    parser.add_argument(
-        "-o", "--output", type=str, nargs="?", default=DEFAULT_OUTPUT,
-        help=f"Name of the json output file, default is {DEFAULT_OUTPUT}"
-    )
     return vars(parser.parse_args())
 
 
-def main(command: str, output: str):
+def main(command: str):
     if command == "scrape":
-        with Scraper(output_filename=output) as scraper:
+        with Scraper() as scraper:
 
             scraper.scrape(scrape_hoerzu)
             print(scraper.commit_message())
@@ -100,5 +89,4 @@ def write_stats():
 
 if __name__ == "__main__":
     main(**parse_args())
-
 

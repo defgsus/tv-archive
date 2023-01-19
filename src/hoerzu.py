@@ -17,7 +17,10 @@ _RE_BID = re.compile(r".*bid_(\d+).*")
 _RE_STAFFEL = re.compile(r".*\(Staffel: (\d+) \| Folge: (\d+)\).*")
 
 
-def scrape_hoerzu(callback: ScraperCallback):
+def scrape_hoerzu(
+        callback: ScraperCallback,
+        future_days: int = 0,
+):
     session = requests.Session()
     session.headers.update({
         "Referer": f"{BASE_URL}/tv-programm/",
@@ -25,12 +28,26 @@ def scrape_hoerzu(callback: ScraperCallback):
         "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0",
     })
 
+    scrape_hoerzu_overview(session, callback, f"{BASE_URL}/tv-programm/")
+
+    if future_days:
+        # TODO: the website does not really work that way
+        #   they only provide the overview for the future day
+        #   but there seems to be no complete page-per-channel for future days
+        today = datetime.date.today()
+        for i in range(1, future_days + 1):
+            date = today + datetime.timedelta(days=i)
+            url = f"{BASE_URL}/tv-programm/{date.strftime('%d.%m.%Y')}/"
+            scrape_hoerzu_overview(session, callback, url)
+
+
+def scrape_hoerzu_overview(session: requests.Session, callback: ScraperCallback, url: str):
     markups = [
-        session.get(f"{BASE_URL}/tv-programm/").text
+        session.get(url).text
     ]
 
     response = session.get(
-        f"{BASE_URL}/tv-programm/?getAdditionalPages=true",
+        f"{url}?getAdditionalPages=true",
     )
     markups.extend(response.json()["data"])
 

@@ -3,7 +3,9 @@ import json
 import os
 from pathlib import Path
 from dataclasses import dataclass
-from typing import Callable, Optional, List, IO, Union, Any
+from typing import Callable, Optional, List, IO, Union, Any, Dict
+
+from . import DATA_PATH
 
 
 @dataclass
@@ -34,28 +36,25 @@ ScraperCallback = Callable[[Union[Program, Error]], None]
 
 class Scraper:
 
-    def __init__(self, output_filename: Union[str, Path]):
-        self.output_filename = Path(output_filename)
-        self.output_file: Optional[IO[str]] = None
+    def __init__(self):
+        self.output_files: Dict[datetime.date, IO[str]] = {}
         self._error_count = {}
         self._channel_count = {}
 
     def __enter__(self):
-        os.makedirs(self.output_filename.parent, exist_ok=True)
-        self.output_file = open(self.output_filename, "wt")
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        self.output_file.close()
-        self.output_file = None
+        for fp in self.output_files.values():
+            fp.close()
+        self.output_files = {}
 
     def scrape(self, scraper: Callable[[ScraperCallback], None]):
         scraper(self._callback)
 
     def _callback(self, program: Union[Program, Error]):
         if isinstance(program, Program):
-            dump = json.dumps(vars(program), ensure_ascii=False, cls=_JsonEncoder)
-            self.output_file.write(dump + "\n")
+            self._store_program(program)
 
             if program.channel not in self._channel_count:
                 self._channel_count[program.channel] = 0
@@ -65,6 +64,16 @@ class Scraper:
             if program.type not in self._error_count:
                 self._error_count[program.type] = 0
             self._error_count[program.type] += 1
+
+    def _store_program(self, program: Program):
+        date = program.date.date()
+        if date not in self.output_files:
+            filename = DATA_PATH / f"{date.year:04}" / f"{date.month:02}" / f"{date.strftime('%Y-%m-%d')}.ndjson"
+            os.makedirs(filename.parent, exist_ok=True)
+            self.output_files[date] = open(filename, "wt")
+
+        dump = json.dumps(vars(program), ensure_ascii=False, cls=_JsonEncoder)
+        self.output_files[date].write(dump + "\n")
 
     def commit_message(self) -> str:
         msg = f"update at {datetime.datetime.utcnow().isoformat()} UTC"
