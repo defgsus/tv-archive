@@ -27,37 +27,37 @@ Each entry looks like this:
 
 ## Statistics
 
-**96** channels, **10,057.2** hours playtime between **2023-01-17** and **2023-01-22**
+**96** channels, **10,057.0** hours playtime between **2023-01-17** and **2023-01-22**
 
 
 ### playtime per genre (top 30)
 
-    718.7h 7.15% Nachrichten
-    568.8h 5.66% Verkaufsshow
-    421.2h 4.19% Krimiserie
-    333.1h 3.31% Dokusoap
-    322.5h 3.21% Werbesendung
+    718.8h 7.15% Nachrichten
+    566.3h 5.63% Verkaufsshow
+    421.3h 4.19% Krimiserie
+    333.2h 3.31% Dokusoap
+    323.5h 3.22% Werbesendung
     306.5h 3.05% Regionalmagazin
-    296.2h 2.95% Dokureihe
-    295.2h 2.93% *unknown*
-    239.7h 2.38% Dokumentation
-    214.8h 2.14% Infomercial
-    185.9h 1.85% Zeichentrickserie
+    295.5h 2.94% *unknown*
+    294.5h 2.93% Dokureihe
+    240.0h 2.39% Dokumentation
+    213.3h 2.12% Infomercial
+    185.8h 1.85% Zeichentrickserie
     177.7h 1.77% Comedyserie
-    168.9h 1.68% Animationsserie
+    169.1h 1.68% Animationsserie
     140.6h 1.40% Talkshow
-    128.9h 1.28% Magazin
+    129.5h 1.29% Magazin
     127.1h 1.26% Religionsmagazin
     122.5h 1.22% Morgenmagazin
     116.7h 1.16% E-Sport
-    89.5h  0.89% Sitcom
+    89.6h  0.89% Sitcom
     88.1h  0.88% Wirtschaftsmagazin
-    86.4h  0.86% Dramaserie
+    87.8h  0.87% Dramaserie
     84.9h  0.84% Programmende
-    84.3h  0.84% Tennis
-    80.1h  0.80% Musikmagazin
-    78.8h  0.78% Wetterbericht
-    76.5h  0.76% Realityshow
+    84.6h  0.84% Tennis
+    78.6h  0.78% Musikmagazin
+    78.2h  0.78% Wetterbericht
+    76.7h  0.76% Realityshow
     75.5h  0.75% Wirtschaftstalk
     74.7h  0.74% Quiz
     74.4h  0.74% Gesundheitsmagazin
