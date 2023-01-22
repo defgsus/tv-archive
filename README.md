@@ -27,38 +27,38 @@ Each entry looks like this:
 
 ## Statistics
 
-**96** channels, **10,057.0** hours playtime between **2023-01-17** and **2023-01-22**
+**96** channels, **11,887.6** hours playtime between **2023-01-17** and **2023-01-23**
 
 
 ### playtime per genre (top 30)
 
-    718.8h 7.15% Nachrichten
-    566.3h 5.63% Verkaufsshow
-    421.3h 4.19% Krimiserie
-    333.2h 3.31% Dokusoap
-    323.5h 3.22% Werbesendung
-    306.5h 3.05% Regionalmagazin
-    295.5h 2.94% *unknown*
-    294.5h 2.93% Dokureihe
-    240.0h 2.39% Dokumentation
-    213.3h 2.12% Infomercial
-    185.8h 1.85% Zeichentrickserie
-    177.7h 1.77% Comedyserie
-    169.1h 1.68% Animationsserie
-    140.6h 1.40% Talkshow
-    129.5h 1.29% Magazin
-    127.1h 1.26% Religionsmagazin
-    122.5h 1.22% Morgenmagazin
-    116.7h 1.16% E-Sport
-    89.6h  0.89% Sitcom
-    88.1h  0.88% Wirtschaftsmagazin
-    87.8h  0.87% Dramaserie
-    84.9h  0.84% Programmende
-    84.6h  0.84% Tennis
-    78.6h  0.78% Musikmagazin
-    78.2h  0.78% Wetterbericht
-    76.7h  0.76% Realityshow
-    75.5h  0.75% Wirtschaftstalk
-    74.7h  0.74% Quiz
-    74.4h  0.74% Gesundheitsmagazin
-    74.3h  0.74% Wissensmagazin
+    800.9h 6.74% Nachrichten
+    653.8h 5.50% Verkaufsshow
+    485.2h 4.08% Krimiserie
+    399.2h 3.36% Dokusoap
+    388.3h 3.27% Werbesendung
+    358.1h 3.01% Dokureihe
+    338.5h 2.85% *unknown*
+    333.6h 2.81% Regionalmagazin
+    308.6h 2.60% Dokumentation
+    245.2h 2.06% Infomercial
+    222.1h 1.87% Zeichentrickserie
+    201.5h 1.70% Animationsserie
+    198.7h 1.67% Comedyserie
+    167.6h 1.41% Talkshow
+    164.5h 1.38% Religionsmagazin
+    147.8h 1.24% Magazin
+    136.7h 1.15% E-Sport
+    129.3h 1.09% Morgenmagazin
+    119.8h 1.01% Programmende
+    102.8h 0.87% Wirtschaftsmagazin
+    98.6h  0.83% Sitcom
+    98.5h  0.83% Wissensmagazin
+    98.5h  0.83% Wirtschaftstalk
+    98.0h  0.82% Musikmagazin
+    97.5h  0.82% Tennis
+    95.5h  0.80% Dramaserie
+    93.2h  0.78% Wetterbericht
+    91.0h  0.77% Drama
+    81.6h  0.69% Gesundheitsmagazin
+    80.7h  0.68% Krankenhausserie
