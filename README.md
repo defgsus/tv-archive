@@ -27,38 +27,38 @@ Each entry looks like this:
 
 ## Statistics
 
-**96** channels, **11,884.8** hours playtime between **2023-01-17** and **2023-01-23**
+**96** channels, **13,670.6** hours playtime between **2023-01-17** and **2023-01-24**
 
 
 ### playtime per genre (top 30)
 
-    801.0h 6.74% Nachrichten
-    657.2h 5.53% Verkaufsshow
-    485.2h 4.08% Krimiserie
-    399.2h 3.36% Dokusoap
-    388.3h 3.27% Werbesendung
-    358.1h 3.01% Dokureihe
-    338.5h 2.85% *unknown*
-    333.6h 2.81% Regionalmagazin
-    308.8h 2.60% Dokumentation
-    245.2h 2.06% Infomercial
-    222.3h 1.87% Zeichentrickserie
-    201.5h 1.70% Animationsserie
-    198.7h 1.67% Comedyserie
-    167.7h 1.41% Talkshow
-    164.5h 1.38% Religionsmagazin
-    148.2h 1.25% Magazin
-    136.7h 1.15% E-Sport
-    129.3h 1.09% Morgenmagazin
-    119.8h 1.01% Programmende
-    102.8h 0.87% Wirtschaftsmagazin
-    98.8h  0.83% Tennis
-    98.6h  0.83% Sitcom
-    98.5h  0.83% Wissensmagazin
-    98.5h  0.83% Wirtschaftstalk
-    95.5h  0.80% Dramaserie
-    92.8h  0.78% Wetterbericht
-    92.4h  0.78% Musikmagazin
-    91.0h  0.77% Drama
-    81.6h  0.69% Gesundheitsmagazin
-    80.7h  0.68% Krankenhausserie
+    957.4h 7.00% Nachrichten
+    748.8h 5.48% Verkaufsshow
+    559.6h 4.09% Krimiserie
+    462.8h 3.39% Dokusoap
+    445.1h 3.26% Dokureihe
+    442.8h 3.24% Werbesendung
+    380.0h 2.78% Regionalmagazin
+    373.3h 2.73% *unknown*
+    354.3h 2.59% Dokumentation
+    276.4h 2.02% Infomercial
+    258.7h 1.89% Zeichentrickserie
+    235.1h 1.72% Animationsserie
+    234.6h 1.72% Comedyserie
+    190.0h 1.39% Talkshow
+    182.7h 1.34% Religionsmagazin
+    171.3h 1.25% Magazin
+    164.1h 1.20% Morgenmagazin
+    155.2h 1.14% E-Sport
+    134.1h 0.98% Programmende
+    121.1h 0.89% Wirtschaftsmagazin
+    115.8h 0.85% Sitcom
+    113.4h 0.83% Tennis
+    111.0h 0.81% Wissensmagazin
+    109.4h 0.80% Dramaserie
+    109.2h 0.80% Wetterbericht
+    107.7h 0.79% Quiz
+    101.7h 0.74% Wirtschaftstalk
+    101.7h 0.74% Musikmagazin
+    96.2h  0.70% Gesundheitsmagazin
+    95.4h  0.70% Realityshow
