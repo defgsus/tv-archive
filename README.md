@@ -27,38 +27,38 @@ Each entry looks like this:
 
 ## Statistics
 
-**96** channels, **15,437.7** hours playtime between **2023-01-17** and **2023-01-25**
+**96** channels, **15,487.6** hours playtime between **2023-01-17** and **2023-01-25**
 
 
 ### playtime per genre (top 30)
 
-    1097.3h 7.11% Nachrichten
-    841.7h  5.45% Verkaufsshow
-    661.3h  4.28% Krimiserie
-    518.1h  3.36% Dokusoap
-    498.7h  3.23% Werbesendung
-    490.7h  3.18% Dokureihe
-    422.6h  2.74% Regionalmagazin
-    405.9h  2.63% *unknown*
-    383.1h  2.48% Dokumentation
-    309.2h  2.00% Infomercial
+    1101.0h 7.11% Nachrichten
+    843.9h  5.45% Verkaufsshow
+    661.2h  4.27% Krimiserie
+    518.2h  3.35% Dokusoap
+    499.7h  3.23% Werbesendung
+    491.2h  3.17% Dokureihe
+    442.2h  2.86% Regionalmagazin
+    408.4h  2.64% *unknown*
+    385.0h  2.49% Dokumentation
+    309.7h  2.00% Infomercial
     295.5h  1.91% Zeichentrickserie
     267.8h  1.73% Animationsserie
-    267.1h  1.73% Comedyserie
-    209.6h  1.36% Talkshow
-    204.6h  1.33% Religionsmagazin
-    198.8h  1.29% Morgenmagazin
-    195.5h  1.27% Magazin
-    173.8h  1.13% E-Sport
+    266.8h  1.72% Comedyserie
+    209.6h  1.35% Talkshow
+    206.3h  1.33% Religionsmagazin
+    199.6h  1.29% Magazin
+    198.8h  1.28% Morgenmagazin
+    173.8h  1.12% E-Sport
     147.1h  0.95% Programmende
     135.9h  0.88% Wirtschaftsmagazin
-    132.5h  0.86% Sitcom
+    132.4h  0.85% Sitcom
     127.8h  0.83% Dramaserie
-    125.3h  0.81% Wetterbericht
-    124.1h  0.80% Tennis
-    123.2h  0.80% Wissensmagazin
-    122.9h  0.80% Börsenmagazin
+    125.0h  0.81% Wetterbericht
+    124.4h  0.80% Tennis
+    123.5h  0.80% Wissensmagazin
+    122.9h  0.79% Börsenmagazin
     116.3h  0.75% Realityshow
     116.2h  0.75% Musikmagazin
-    114.2h  0.74% Quiz
-    111.8h  0.72% Krankenhausserie
+    114.3h  0.74% Quiz
+    112.4h  0.73% Gesundheitsmagazin
