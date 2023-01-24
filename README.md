@@ -27,38 +27,38 @@ Each entry looks like this:
 
 ## Statistics
 
-**96** channels, **13,670.9** hours playtime between **2023-01-17** and **2023-01-24**
+**96** channels, **15,437.7** hours playtime between **2023-01-17** and **2023-01-25**
 
 
 ### playtime per genre (top 30)
 
-    957.4h 7.00% Nachrichten
-    748.8h 5.48% Verkaufsshow
-    559.6h 4.09% Krimiserie
-    462.8h 3.39% Dokusoap
-    445.1h 3.26% Dokureihe
-    442.8h 3.24% Werbesendung
-    380.0h 2.78% Regionalmagazin
-    371.8h 2.72% *unknown*
-    354.4h 2.59% Dokumentation
-    276.4h 2.02% Infomercial
-    258.7h 1.89% Zeichentrickserie
-    235.1h 1.72% Animationsserie
-    234.6h 1.72% Comedyserie
-    190.0h 1.39% Talkshow
-    182.7h 1.34% Religionsmagazin
-    171.4h 1.25% Magazin
-    164.1h 1.20% Morgenmagazin
-    155.2h 1.14% E-Sport
-    133.9h 0.98% Programmende
-    121.1h 0.89% Wirtschaftsmagazin
-    115.8h 0.85% Sitcom
-    115.5h 0.84% Tennis
-    111.9h 0.82% Wissensmagazin
-    109.5h 0.80% Wetterbericht
-    109.4h 0.80% Dramaserie
-    107.8h 0.79% Quiz
-    101.7h 0.74% Wirtschaftstalk
-    101.7h 0.74% Musikmagazin
-    96.2h  0.70% Gesundheitsmagazin
-    95.4h  0.70% Realityshow
+    1097.3h 7.11% Nachrichten
+    841.7h  5.45% Verkaufsshow
+    661.3h  4.28% Krimiserie
+    518.1h  3.36% Dokusoap
+    498.7h  3.23% Werbesendung
+    490.7h  3.18% Dokureihe
+    422.6h  2.74% Regionalmagazin
+    405.1h  2.62% *unknown*
+    383.9h  2.49% Dokumentation
+    309.2h  2.00% Infomercial
+    295.5h  1.91% Zeichentrickserie
+    267.8h  1.73% Animationsserie
+    267.1h  1.73% Comedyserie
+    209.6h  1.36% Talkshow
+    204.6h  1.33% Religionsmagazin
+    198.8h  1.29% Morgenmagazin
+    195.5h  1.27% Magazin
+    173.8h  1.13% E-Sport
+    147.1h  0.95% Programmende
+    135.9h  0.88% Wirtschaftsmagazin
+    132.5h  0.86% Sitcom
+    127.8h  0.83% Dramaserie
+    125.3h  0.81% Wetterbericht
+    124.1h  0.80% Tennis
+    123.2h  0.80% Wissensmagazin
+    122.9h  0.80% Börsenmagazin
+    116.3h  0.75% Realityshow
+    116.2h  0.75% Musikmagazin
+    114.2h  0.74% Quiz
+    111.8h  0.72% Krankenhausserie
