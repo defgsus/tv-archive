@@ -39,8 +39,8 @@ Each entry looks like this:
     498.7h  3.23% Werbesendung
     490.7h  3.18% Dokureihe
     422.6h  2.74% Regionalmagazin
-    405.1h  2.62% *unknown*
-    383.9h  2.49% Dokumentation
+    405.9h  2.63% *unknown*
+    383.1h  2.48% Dokumentation
     309.2h  2.00% Infomercial
     295.5h  1.91% Zeichentrickserie
     267.8h  1.73% Animationsserie
