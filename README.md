@@ -27,38 +27,38 @@ Each entry looks like this:
 
 ## Statistics
 
-**96** channels, **77,471.1** hours playtime between **2023-01-17** and **2023-02-28**
+**96** channels, **79,226.9** hours playtime between **2023-01-17** and **2023-03-01**
 
 
 ### playtime per genre (top 30)
 
-    5476.5h 7.07% Nachrichten
-    3901.3h 5.04% Verkaufsshow
-    3265.2h 4.21% Krimiserie
-    2635.7h 3.40% Werbesendung
-    2554.6h 3.30% Dokusoap
-    2314.5h 2.99% Dokureihe
-    2263.6h 2.92% Regionalmagazin
-    1908.7h 2.46% Dokumentation
-    1860.1h 2.40% *unknown*
-    1463.0h 1.89% Animationsserie
-    1427.6h 1.84% Zeichentrickserie
-    1417.2h 1.83% Infomercial
-    1258.7h 1.62% Comedyserie
-    1093.8h 1.41% Morgenmagazin
-    1045.6h 1.35% Programmende
-    1021.0h 1.32% Religionsmagazin
-    1013.6h 1.31% Talkshow
-    831.4h  1.07% Magazin
-    810.8h  1.05% E-Sport
-    724.1h  0.93% Sitcom
-    688.5h  0.89% Börsenmagazin
-    681.4h  0.88% Wetterbericht
-    626.8h  0.81% Wirtschaftsmagazin
-    608.9h  0.79% Wissensmagazin
-    587.1h  0.76% Quiz
-    564.9h  0.73% Musikmagazin
-    559.9h  0.72% Dramaserie
-    545.8h  0.70% Gesundheitsmagazin
-    525.9h  0.68% Telenovela
-    499.4h  0.64% Sportmagazin
+    5615.0h 7.09% Nachrichten
+    3976.6h 5.02% Verkaufsshow
+    3360.5h 4.24% Krimiserie
+    2689.2h 3.39% Werbesendung
+    2612.2h 3.30% Dokusoap
+    2359.1h 2.98% Dokureihe
+    2324.6h 2.93% Regionalmagazin
+    1946.4h 2.46% Dokumentation
+    1894.2h 2.39% *unknown*
+    1501.6h 1.90% Animationsserie
+    1459.3h 1.84% Zeichentrickserie
+    1450.0h 1.83% Infomercial
+    1287.2h 1.62% Comedyserie
+    1128.6h 1.42% Morgenmagazin
+    1060.6h 1.34% Programmende
+    1041.0h 1.31% Religionsmagazin
+    1038.8h 1.31% Talkshow
+    850.8h  1.07% Magazin
+    819.8h  1.03% E-Sport
+    743.1h  0.94% Sitcom
+    717.0h  0.90% Börsenmagazin
+    698.5h  0.88% Wetterbericht
+    640.9h  0.81% Wirtschaftsmagazin
+    621.3h  0.78% Wissensmagazin
+    597.8h  0.75% Quiz
+    582.6h  0.74% Musikmagazin
+    575.2h  0.73% Dramaserie
+    561.9h  0.71% Gesundheitsmagazin
+    543.9h  0.69% Telenovela
+    511.4h  0.65% Sportmagazin
