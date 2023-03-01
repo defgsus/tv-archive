@@ -27,38 +27,38 @@ Each entry looks like this:
 
 ## Statistics
 
-**96** channels, **81,094.8** hours playtime between **2023-01-17** and **2023-03-02**
+**96** channels, **81,095.0** hours playtime between **2023-01-17** and **2023-03-02**
 
 
 ### playtime per genre (top 30)
 
-    5759.0h 7.10% Nachrichten
+    5761.0h 7.10% Nachrichten
     4088.8h 5.04% Verkaufsshow
     3440.2h 4.24% Krimiserie
     2753.1h 3.39% Werbesendung
-    2671.1h 3.29% Dokusoap
-    2414.3h 2.98% Dokureihe
+    2670.6h 3.29% Dokusoap
+    2414.4h 2.98% Dokureihe
     2399.8h 2.96% Regionalmagazin
-    1974.4h 2.43% Dokumentation
-    1919.2h 2.37% *unknown*
-    1537.8h 1.90% Animationsserie
-    1490.3h 1.84% Zeichentrickserie
-    1482.5h 1.83% Infomercial
-    1326.3h 1.64% Comedyserie
+    1975.1h 2.44% Dokumentation
+    1918.2h 2.37% *unknown*
+    1537.3h 1.90% Animationsserie
+    1491.0h 1.84% Zeichentrickserie
+    1482.6h 1.83% Infomercial
+    1326.1h 1.64% Comedyserie
     1163.3h 1.43% Morgenmagazin
-    1094.2h 1.35% Programmende
-    1064.0h 1.31% Talkshow
+    1094.3h 1.35% Programmende
+    1063.4h 1.31% Talkshow
     1063.0h 1.31% Religionsmagazin
-    865.9h  1.07% Magazin
-    844.5h  1.04% E-Sport
-    770.2h  0.95% Sitcom
-    732.1h  0.90% Börsenmagazin
-    716.0h  0.88% Wetterbericht
+    865.2h  1.07% Magazin
+    845.4h  1.04% E-Sport
+    769.2h  0.95% Sitcom
+    731.4h  0.90% Börsenmagazin
+    715.2h  0.88% Wetterbericht
     659.8h  0.81% Wirtschaftsmagazin
-    638.1h  0.79% Wissensmagazin
+    638.8h  0.79% Wissensmagazin
     610.4h  0.75% Quiz
     592.8h  0.73% Musikmagazin
     589.2h  0.73% Dramaserie
-    584.2h  0.72% Gesundheitsmagazin
+    584.1h  0.72% Gesundheitsmagazin
     561.8h  0.69% Telenovela
-    528.8h  0.65% Gerichtsshow
+    529.0h  0.65% Gerichtsshow
