@@ -40,11 +40,11 @@ Each entry looks like this:
     3232.0h 3.04% Dokureihe
     3144.0h 2.95% Regionalmagazin
     2621.7h 2.46% Dokumentation
-    2513.0h 2.36% *unknown*
+    2511.5h 2.36% *unknown*
     2041.1h 1.92% Animationsserie
     1952.9h 1.83% Infomercial
     1920.8h 1.80% Zeichentrickserie
-    1746.2h 1.64% Comedyserie
+    1746.7h 1.64% Comedyserie
     1521.2h 1.43% Morgenmagazin
     1453.1h 1.36% Programmende
     1413.6h 1.33% Talkshow
