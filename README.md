@@ -27,38 +27,38 @@ Each entry looks like this:
 
 ## Statistics
 
-**96** channels, **217,395.5** hours playtime between **2023-01-17** and **2023-05-17**
+**96** channels, **217,444.0** hours playtime between **2023-01-17** and **2023-05-17**
 
 
 ### playtime per genre (top 30)
 
-    14658.8h 6.74% Nachrichten
-    10549.6h 4.85% Verkaufsshow
-    8848.8h  4.07% Krimiserie
-    7226.2h  3.32% Werbesendung
-    7066.3h  3.25% Dokureihe
-    6422.9h  2.95% Dokusoap
-    6243.1h  2.87% Regionalmagazin
-    5516.8h  2.54% Dokumentation
-    5365.7h  2.47% *unknown*
-    4046.2h  1.86% Zeichentrickserie
-    3988.3h  1.83% Infomercial
-    3925.1h  1.81% Animationsserie
-    3623.2h  1.67% Comedyserie
+    14662.3h 6.74% Nachrichten
+    10554.7h 4.85% Verkaufsshow
+    8848.6h  4.07% Krimiserie
+    7224.2h  3.32% Werbesendung
+    7065.7h  3.25% Dokureihe
+    6424.7h  2.95% Dokusoap
+    6259.1h  2.88% Regionalmagazin
+    5516.0h  2.54% Dokumentation
+    5372.4h  2.47% *unknown*
+    4046.3h  1.86% Zeichentrickserie
+    3988.8h  1.83% Infomercial
+    3924.8h  1.80% Animationsserie
+    3622.8h  1.67% Comedyserie
     3017.2h  1.39% Morgenmagazin
-    2989.2h  1.37% Programmende
-    2873.5h  1.32% Talkshow
-    2845.7h  1.31% Religionsmagazin
-    2477.8h  1.14% Magazin
+    2989.1h  1.37% Programmende
+    2873.8h  1.32% Talkshow
+    2848.3h  1.31% Religionsmagazin
+    2484.2h  1.14% Magazin
     2178.8h  1.00% E-Sport
     2054.3h  0.94% Sitcom
-    1992.0h  0.92% Börsenmagazin
-    1968.1h  0.91% Wetterbericht
-    1720.0h  0.79% Wirtschaftsmagazin
-    1700.0h  0.78% Wissensmagazin
-    1679.1h  0.77% Musikmagazin
+    1988.7h  0.91% Börsenmagazin
+    1968.2h  0.91% Wetterbericht
+    1720.2h  0.79% Wirtschaftsmagazin
+    1700.4h  0.78% Wissensmagazin
+    1681.1h  0.77% Musikmagazin
     1670.2h  0.77% Quiz
     1538.2h  0.71% Telenovela
-    1514.2h  0.70% Sportmagazin
-    1490.0h  0.69% Komödie
-    1474.6h  0.68% Gesundheitsmagazin
+    1514.8h  0.70% Sportmagazin
+    1490.1h  0.69% Komödie
+    1477.4h  0.68% Gesundheitsmagazin
