@@ -27,38 +27,38 @@ Each entry looks like this:
 
 ## Statistics
 
-**96** channels, **271,223.3** hours playtime between **2023-01-17** and **2023-06-16**
+**96** channels, **271,227.9** hours playtime between **2023-01-17** and **2023-06-16**
 
 
 ### playtime per genre (top 30)
 
-    18099.7h 6.67% Nachrichten
-    13071.2h 4.82% Verkaufsshow
-    10858.5h 4.00% Krimiserie
-    9022.2h  3.33% Werbesendung
-    8826.6h  3.25% Dokureihe
-    8165.3h  3.01% Dokusoap
-    7762.8h  2.86% Regionalmagazin
-    6945.2h  2.56% Dokumentation
-    6783.0h  2.50% *unknown*
+    18100.0h 6.67% Nachrichten
+    13070.2h 4.82% Verkaufsshow
+    10858.3h 4.00% Krimiserie
+    9024.2h  3.33% Werbesendung
+    8826.7h  3.25% Dokureihe
+    8165.2h  3.01% Dokusoap
+    7761.8h  2.86% Regionalmagazin
+    6944.2h  2.56% Dokumentation
+    6777.4h  2.50% *unknown*
     5145.9h  1.90% Zeichentrickserie
-    4970.1h  1.83% Infomercial
+    4967.9h  1.83% Infomercial
     4806.8h  1.77% Animationsserie
-    4511.9h  1.66% Comedyserie
+    4511.8h  1.66% Comedyserie
     3776.8h  1.39% Morgenmagazin
-    3574.1h  1.32% Talkshow
+    3575.5h  1.32% Talkshow
     3551.9h  1.31% Religionsmagazin
-    3403.4h  1.25% Programmende
-    3157.1h  1.16% Magazin
+    3403.3h  1.25% Programmende
+    3158.5h  1.16% Magazin
     2716.6h  1.00% E-Sport
-    2563.7h  0.95% Sitcom
-    2488.1h  0.92% Wetterbericht
-    2446.0h  0.90% Börsenmagazin
-    2136.2h  0.79% Wirtschaftsmagazin
-    2116.2h  0.78% Quiz
+    2564.0h  0.95% Sitcom
+    2487.8h  0.92% Wetterbericht
+    2445.4h  0.90% Börsenmagazin
+    2136.9h  0.79% Wirtschaftsmagazin
+    2117.0h  0.78% Quiz
     2109.6h  0.78% Musikmagazin
-    2095.6h  0.77% Wissensmagazin
+    2095.7h  0.77% Wissensmagazin
     2009.5h  0.74% Komödie
     1929.1h  0.71% Telenovela
     1842.2h  0.68% Sportmagazin
-    1764.5h  0.65% Gesundheitsmagazin
+    1764.0h  0.65% Gesundheitsmagazin
