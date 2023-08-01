@@ -40,7 +40,7 @@ Each entry looks like this:
     10718.6h 3.02% Dokusoap
     10194.5h 2.87% Regionalmagazin
     8936.1h  2.51% Dokumentation
-    8629.5h  2.43% *unknown*
+    8629.0h  2.43% *unknown*
     6730.2h  1.89% Zeichentrickserie
     6500.2h  1.83% Infomercial
     6276.0h  1.77% Animationsserie
@@ -54,7 +54,7 @@ Each entry looks like this:
     3348.7h  0.94% Sitcom
     3335.2h  0.94% Wetterbericht
     3229.3h  0.91% Börsenmagazin
-    2836.7h  0.80% Quiz
+    2837.2h  0.80% Quiz
     2784.8h  0.78% Musikmagazin
     2732.7h  0.77% Wirtschaftsmagazin
     2729.7h  0.77% Komödie
