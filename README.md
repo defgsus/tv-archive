@@ -32,7 +32,7 @@ Each entry looks like this:
 
 ### playtime per genre (top 30)
 
-    24097.2h 6.61% Nachrichten
+    24097.4h 6.61% Nachrichten
     17343.8h 4.76% Verkaufsshow
     14705.1h 4.04% Krimiserie
     12281.4h 3.37% Werbesendung
@@ -40,7 +40,7 @@ Each entry looks like this:
     11006.3h 3.02% Dokusoap
     10430.4h 2.86% Regionalmagazin
     9186.2h  2.52% Dokumentation
-    8880.7h  2.44% *unknown*
+    8880.5h  2.44% *unknown*
     6893.6h  1.89% Zeichentrickserie
     6662.5h  1.83% Infomercial
     6434.6h  1.77% Animationsserie
