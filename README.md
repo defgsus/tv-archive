@@ -37,16 +37,16 @@ Each entry looks like this:
     14776.6h 4.04% Krimiserie
     12338.4h 3.37% Werbesendung
     12030.5h 3.29% Dokureihe
-    11061.6h 3.02% Dokusoap
+    11060.8h 3.02% Dokusoap
     10493.5h 2.87% Regionalmagazin
     9223.3h  2.52% Dokumentation
-    8911.9h  2.43% *unknown*
-    6926.9h  1.89% Zeichentrickserie
+    8914.2h  2.43% *unknown*
+    6926.6h  1.89% Zeichentrickserie
     6693.5h  1.83% Infomercial
     6470.7h  1.77% Animationsserie
     6004.9h  1.64% Comedyserie
     5125.9h  1.40% Morgenmagazin
-    4869.2h  1.33% Religionsmagazin
+    4868.7h  1.33% Religionsmagazin
     4829.9h  1.32% Talkshow
     4381.3h  1.20% Magazin
     4130.2h  1.13% Programmende
