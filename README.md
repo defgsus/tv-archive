@@ -27,38 +27,38 @@ Each entry looks like this:
 
 ## Statistics
 
-**97** channels, **450,227.7** hours playtime between **2023-01-17** and **2023-09-24**
+**97** channels, **452,001.5** hours playtime between **2023-01-17** and **2023-09-25**
 
 
 ### playtime per genre (top 30)
 
-    29719.1h 6.60% Nachrichten
-    21428.2h 4.76% Verkaufsshow
-    18208.5h 4.04% Krimiserie
-    15191.8h 3.37% Werbesendung
-    14833.0h 3.29% Dokureihe
-    13699.7h 3.04% Dokusoap
-    12961.3h 2.88% Regionalmagazin
-    11317.7h 2.51% Dokumentation
-    10713.2h 2.38% *unknown*
-    8482.7h  1.88% Zeichentrickserie
-    8214.9h  1.82% Infomercial
-    7991.5h  1.77% Animationsserie
-    7281.3h  1.62% Comedyserie
-    6365.4h  1.41% Morgenmagazin
-    6026.2h  1.34% Religionsmagazin
-    5953.4h  1.32% Talkshow
-    5607.1h  1.25% Magazin
-    4783.6h  1.06% Programmende
-    4440.1h  0.99% E-Sport
-    4243.5h  0.94% Sitcom
-    4231.5h  0.94% Wetterbericht
-    4055.3h  0.90% Börsenmagazin
-    3759.1h  0.83% Quiz
-    3491.4h  0.78% Musikmagazin
-    3472.7h  0.77% Komödie
-    3404.1h  0.76% Wirtschaftsmagazin
-    3371.8h  0.75% Wissensmagazin
+    29798.5h 6.59% Nachrichten
+    21502.8h 4.76% Verkaufsshow
+    18274.5h 4.04% Krimiserie
+    15255.6h 3.38% Werbesendung
+    14888.0h 3.29% Dokureihe
+    13758.2h 3.04% Dokusoap
+    12995.7h 2.88% Regionalmagazin
+    11374.6h 2.52% Dokumentation
+    10758.0h 2.38% *unknown*
+    8515.6h  1.88% Zeichentrickserie
+    8245.4h  1.82% Infomercial
+    8020.1h  1.77% Animationsserie
+    7289.6h  1.61% Comedyserie
+    6373.6h  1.41% Morgenmagazin
+    6064.0h  1.34% Religionsmagazin
+    5985.9h  1.32% Talkshow
+    5630.3h  1.25% Magazin
+    4792.2h  1.06% Programmende
+    4450.7h  0.98% E-Sport
+    4253.7h  0.94% Sitcom
+    4245.4h  0.94% Wetterbericht
+    4059.3h  0.90% Börsenmagazin
+    3760.0h  0.83% Quiz
+    3504.0h  0.78% Musikmagazin
+    3491.9h  0.77% Komödie
+    3413.5h  0.76% Wirtschaftsmagazin
+    3387.9h  0.75% Wissensmagazin
     3191.9h  0.71% Telenovela
-    2978.9h  0.66% Politikmagazin
-    2957.7h  0.66% Reportagereihe
+    2985.9h  0.66% Politikmagazin
+    2959.8h  0.65% Reportagereihe
