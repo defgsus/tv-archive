@@ -40,7 +40,7 @@ Each entry looks like this:
     14180.7h 3.05% Dokusoap
     13361.7h 2.88% Regionalmagazin
     11671.1h 2.51% Dokumentation
-    11070.6h 2.38% *unknown*
+    11070.8h 2.38% *unknown*
     8726.2h  1.88% Zeichentrickserie
     8475.6h  1.82% Infomercial
     8248.6h  1.78% Animationsserie
@@ -49,7 +49,7 @@ Each entry looks like this:
     6240.2h  1.34% Religionsmagazin
     6159.0h  1.33% Talkshow
     5778.1h  1.24% Magazin
-    4897.4h  1.05% Programmende
+    4897.2h  1.05% Programmende
     4595.3h  0.99% E-Sport
     4383.4h  0.94% Sitcom
     4347.1h  0.94% Wetterbericht
