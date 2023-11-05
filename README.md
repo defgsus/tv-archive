@@ -40,7 +40,7 @@ Each entry looks like this:
     16024.5h 3.04% Dokusoap
     15189.5h 2.88% Regionalmagazin
     13453.8h 2.55% Dokumentation
-    12740.3h 2.42% *unknown*
+    12739.8h 2.42% *unknown*
     9819.4h  1.86% Zeichentrickserie
     9600.4h  1.82% Infomercial
     9424.3h  1.79% Animationsserie
