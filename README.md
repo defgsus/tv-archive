@@ -36,11 +36,11 @@ Each entry looks like this:
     26778.0h 4.78% Verkaufsshow
     22580.9h 4.03% Krimiserie
     18981.1h 3.39% Werbesendung
-    18247.7h 3.26% Dokureihe
+    18248.2h 3.26% Dokureihe
     16931.2h 3.03% Dokusoap
     16202.9h 2.90% Regionalmagazin
     14278.6h 2.55% Dokumentation
-    13623.9h 2.43% *unknown*
+    13622.2h 2.43% *unknown*
     10362.4h 1.85% Zeichentrickserie
     10198.2h 1.82% Infomercial
     9974.0h  1.78% Animationsserie
@@ -53,7 +53,7 @@ Each entry looks like this:
     5477.9h  0.98% E-Sport
     5384.5h  0.96% Sitcom
     5136.4h  0.92% Wetterbericht
-    5071.7h  0.91% Börsenmagazin
+    5071.8h  0.91% Börsenmagazin
     4676.0h  0.84% Quiz
     4368.7h  0.78% Komödie
     4248.8h  0.76% Wissensmagazin
