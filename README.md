@@ -27,38 +27,38 @@ Each entry looks like this:
 
 ## Statistics
 
-**101** channels, **755,366.4** hours playtime between **2023-01-17** and **2024-03-14**
+**101** channels, **757,134.3** hours playtime between **2023-01-17** and **2024-03-15**
 
 
 ### playtime per genre (top 30)
 
-    49169.6h 6.51% Nachrichten
-    36277.8h 4.80% Verkaufsshow
-    30773.6h 4.07% Krimiserie
-    26186.7h 3.47% Werbesendung
-    24092.6h 3.19% Dokureihe
-    22830.6h 3.02% Dokusoap
-    21947.2h 2.91% Regionalmagazin
-    19490.3h 2.58% Dokumentation
-    19372.5h 2.56% *unknown*
-    13957.1h 1.85% Zeichentrickserie
-    13738.9h 1.82% Infomercial
-    13343.8h 1.77% Animationsserie
-    11466.8h 1.52% Comedyserie
-    10723.1h 1.42% Morgenmagazin
-    10286.5h 1.36% Magazin
-    10201.6h 1.35% Religionsmagazin
-    10059.8h 1.33% Talkshow
-    7441.4h  0.99% E-Sport
-    7137.9h  0.94% Programmende
-    7096.1h  0.94% Sitcom
-    6721.8h  0.89% Börsenmagazin
-    6710.3h  0.89% Wetterbericht
-    6415.9h  0.85% Quiz
-    6381.1h  0.84% Komödie
-    5645.9h  0.75% Wissensmagazin
-    5478.8h  0.73% Realityshow
-    5466.2h  0.72% Politikmagazin
-    5462.9h  0.72% Wirtschaftsmagazin
-    5401.2h  0.72% Telenovela
-    5153.6h  0.68% Musikmagazin
+    49300.5h 6.51% Nachrichten
+    36372.0h 4.80% Verkaufsshow
+    30873.1h 4.08% Krimiserie
+    26248.0h 3.47% Werbesendung
+    24117.0h 3.19% Dokureihe
+    22881.0h 3.02% Dokusoap
+    22009.8h 2.91% Regionalmagazin
+    19532.8h 2.58% Dokumentation
+    19417.7h 2.56% *unknown*
+    13984.5h 1.85% Zeichentrickserie
+    13771.2h 1.82% Infomercial
+    13381.9h 1.77% Animationsserie
+    11495.6h 1.52% Comedyserie
+    10755.5h 1.42% Morgenmagazin
+    10320.4h 1.36% Magazin
+    10220.9h 1.35% Religionsmagazin
+    10078.9h 1.33% Talkshow
+    7471.6h  0.99% E-Sport
+    7151.9h  0.94% Programmende
+    7110.1h  0.94% Sitcom
+    6732.1h  0.89% Börsenmagazin
+    6726.4h  0.89% Wetterbericht
+    6439.7h  0.85% Quiz
+    6387.5h  0.84% Komödie
+    5656.2h  0.75% Wissensmagazin
+    5488.7h  0.72% Realityshow
+    5482.3h  0.72% Politikmagazin
+    5477.7h  0.72% Wirtschaftsmagazin
+    5421.1h  0.72% Telenovela
+    5160.9h  0.68% Musikmagazin
