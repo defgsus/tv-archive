@@ -27,38 +27,38 @@ Each entry looks like this:
 
 ## Statistics
 
-**108** channels, **885,234.5** hours playtime between **2023-01-17** and **2024-06-04**
+**108** channels, **885,401.1** hours playtime between **2023-01-17** and **2024-06-04**
 
 
 ### playtime per genre (top 30)
 
-    57781.6h 6.53% Nachrichten
-    41921.9h 4.74% Verkaufsshow
-    36008.8h 4.07% Krimiserie
-    31112.2h 3.51% Werbesendung
+    57839.2h 6.53% Nachrichten
+    41922.9h 4.73% Verkaufsshow
+    36016.7h 4.07% Krimiserie
+    31125.7h 3.52% Werbesendung
     27887.1h 3.15% Dokureihe
-    26758.8h 3.02% Dokusoap
-    25718.0h 2.91% Regionalmagazin
-    22986.5h 2.60% Dokumentation
-    22483.5h 2.54% *unknown*
-    16276.6h 1.84% Zeichentrickserie
+    26767.7h 3.02% Dokusoap
+    25718.9h 2.90% Regionalmagazin
+    22993.0h 2.60% Dokumentation
+    22411.8h 2.53% *unknown*
+    16279.3h 1.84% Zeichentrickserie
     16113.0h 1.82% Infomercial
-    15773.7h 1.78% Animationsserie
-    13282.5h 1.50% Comedyserie
-    12603.7h 1.42% Magazin
-    12445.0h 1.41% Morgenmagazin
-    11982.7h 1.35% Religionsmagazin
-    11788.4h 1.33% Talkshow
+    15778.2h 1.78% Animationsserie
+    13284.0h 1.50% Comedyserie
+    12605.5h 1.42% Magazin
+    12452.5h 1.41% Morgenmagazin
+    11984.6h 1.35% Religionsmagazin
+    11790.9h 1.33% Talkshow
     8776.0h  0.99% E-Sport
-    8212.5h  0.93% Sitcom
-    8144.7h  0.92% Programmende
-    7881.1h  0.89% Wetterbericht
-    7732.1h  0.87% Börsenmagazin
-    7665.5h  0.87% Quiz
-    7653.7h  0.86% Komödie
+    8213.0h  0.93% Sitcom
+    8143.2h  0.92% Programmende
+    7883.3h  0.89% Wetterbericht
+    7733.1h  0.87% Börsenmagazin
+    7666.8h  0.87% Quiz
+    7659.3h  0.87% Komödie
     6558.6h  0.74% Wissensmagazin
-    6546.4h  0.74% Realityshow
-    6532.6h  0.74% Politikmagazin
-    6258.4h  0.71% Wirtschaftsmagazin
+    6547.6h  0.74% Realityshow
+    6534.9h  0.74% Politikmagazin
+    6263.4h  0.71% Wirtschaftsmagazin
     6202.4h  0.70% Telenovela
-    5845.8h  0.66% Musikmagazin
+    5845.9h  0.66% Musikmagazin
