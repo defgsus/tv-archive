@@ -27,38 +27,38 @@ Each entry looks like this:
 
 ## Statistics
 
-**109** channels, **979,570.7** hours playtime between **2023-01-17** and **2024-08-04**
+**109** channels, **981,378.3** hours playtime between **2023-01-17** and **2024-08-05**
 
 
 ### playtime per genre (top 30)
 
-    63737.5h 6.51% Nachrichten
-    45711.2h 4.67% Verkaufsshow
-    40153.4h 4.10% Krimiserie
-    35131.5h 3.59% Werbesendung
-    30803.1h 3.14% Dokureihe
-    29652.4h 3.03% Dokusoap
-    28501.2h 2.91% Regionalmagazin
-    25494.5h 2.60% Dokumentation
-    24182.3h 2.47% *unknown*
-    18153.9h 1.85% Zeichentrickserie
-    17921.5h 1.83% Infomercial
-    17520.7h 1.79% Animationsserie
-    14493.6h 1.48% Comedyserie
-    13762.3h 1.40% Morgenmagazin
-    13446.5h 1.37% Magazin
-    13302.4h 1.36% Religionsmagazin
-    12903.2h 1.32% Talkshow
-    9696.5h  0.99% E-Sport
-    9282.1h  0.95% Sitcom
-    8855.5h  0.90% Programmende
-    8806.4h  0.90% Wetterbericht
-    8575.8h  0.88% Komödie
-    8430.9h  0.86% Quiz
+    63824.4h 6.50% Nachrichten
+    45784.8h 4.67% Verkaufsshow
+    40216.0h 4.10% Krimiserie
+    35207.7h 3.59% Werbesendung
+    30869.8h 3.15% Dokureihe
+    29689.0h 3.03% Dokusoap
+    28534.5h 2.91% Regionalmagazin
+    25551.4h 2.60% Dokumentation
+    24203.1h 2.47% *unknown*
+    18185.3h 1.85% Zeichentrickserie
+    17957.7h 1.83% Infomercial
+    17551.5h 1.79% Animationsserie
+    14503.6h 1.48% Comedyserie
+    13766.4h 1.40% Morgenmagazin
+    13450.7h 1.37% Magazin
+    13340.5h 1.36% Religionsmagazin
+    12932.5h 1.32% Talkshow
+    9715.6h  0.99% E-Sport
+    9297.1h  0.95% Sitcom
+    8869.5h  0.90% Programmende
+    8824.0h  0.90% Wetterbericht
+    8606.0h  0.88% Komödie
+    8437.1h  0.86% Quiz
     8038.2h  0.82% Börsenmagazin
-    7354.5h  0.75% Politikmagazin
-    7281.5h  0.74% Wissensmagazin
-    7245.4h  0.74% Realityshow
-    6742.6h  0.69% Wirtschaftsmagazin
+    7357.1h  0.75% Politikmagazin
+    7306.8h  0.74% Wissensmagazin
+    7264.6h  0.74% Realityshow
+    6748.0h  0.69% Wirtschaftsmagazin
     6495.1h  0.66% Telenovela
-    6378.3h  0.65% Dramaserie
+    6382.3h  0.65% Dramaserie
