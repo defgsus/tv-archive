@@ -34,13 +34,13 @@ Each entry looks like this:
 
     67910.1h 6.51% Nachrichten
     48458.5h 4.64% Verkaufsshow
-    43026.4h 4.12% Krimiserie
+    43024.7h 4.12% Krimiserie
     37798.7h 3.62% Werbesendung
     32764.3h 3.14% Dokureihe
-    31433.5h 3.01% Dokusoap
+    31432.3h 3.01% Dokusoap
     30490.9h 2.92% Regionalmagazin
     27296.3h 2.62% Dokumentation
-    25124.8h 2.41% *unknown*
+    25135.2h 2.41% *unknown*
     19364.2h 1.86% Zeichentrickserie
     19133.2h 1.83% Infomercial
     18693.7h 1.79% Animationsserie
