@@ -27,38 +27,38 @@ Each entry looks like this:
 
 ## Statistics
 
-**109** channels, **1,045,197.1** hours playtime between **2023-01-17** and **2024-09-15**
+**109** channels, **1,047,027.7** hours playtime between **2023-01-17** and **2024-09-16**
 
 
 ### playtime per genre (top 30)
 
-    67987.6h 6.50% Nachrichten
-    48536.1h 4.64% Verkaufsshow
-    43103.7h 4.12% Krimiserie
-    37873.5h 3.62% Werbesendung
-    32817.7h 3.14% Dokureihe
-    31484.7h 3.01% Dokusoap
-    30508.2h 2.92% Regionalmagazin
-    27333.6h 2.62% Dokumentation
-    25181.4h 2.41% *unknown*
-    19398.2h 1.86% Zeichentrickserie
-    19171.0h 1.83% Infomercial
-    18729.9h 1.79% Animationsserie
-    15283.9h 1.46% Comedyserie
-    14632.2h 1.40% Morgenmagazin
-    14204.5h 1.36% Religionsmagazin
-    13742.2h 1.31% Talkshow
-    13645.9h 1.31% Magazin
-    10327.6h 0.99% E-Sport
-    10009.6h 0.96% Sitcom
-    9456.7h  0.90% Wetterbericht
-    9355.6h  0.90% Programmende
-    9184.0h  0.88% Komödie
-    9064.7h  0.87% Quiz
+    68077.7h 6.50% Nachrichten
+    48604.7h 4.64% Verkaufsshow
+    43166.5h 4.12% Krimiserie
+    37952.4h 3.62% Werbesendung
+    32904.5h 3.14% Dokureihe
+    31527.1h 3.01% Dokusoap
+    30543.1h 2.92% Regionalmagazin
+    27390.3h 2.62% Dokumentation
+    25224.5h 2.41% *unknown*
+    19425.6h 1.86% Zeichentrickserie
+    19216.0h 1.84% Infomercial
+    18753.0h 1.79% Animationsserie
+    15296.8h 1.46% Comedyserie
+    14642.3h 1.40% Morgenmagazin
+    14252.3h 1.36% Religionsmagazin
+    13778.9h 1.32% Talkshow
+    13663.4h 1.30% Magazin
+    10350.8h 0.99% E-Sport
+    10018.1h 0.96% Sitcom
+    9473.2h  0.90% Wetterbericht
+    9374.4h  0.90% Programmende
+    9205.5h  0.88% Komödie
+    9063.6h  0.87% Quiz
     8247.5h  0.79% Börsenmagazin
-    7827.1h  0.75% Wissensmagazin
-    7823.8h  0.75% Politikmagazin
-    7787.6h  0.75% Realityshow
-    7101.8h  0.68% Wirtschaftsmagazin
-    6880.1h  0.66% Telenovela
-    6799.1h  0.65% Dramaserie
+    7857.3h  0.75% Wissensmagazin
+    7830.9h  0.75% Politikmagazin
+    7800.5h  0.75% Realityshow
+    7106.6h  0.68% Wirtschaftsmagazin
+    6880.6h  0.66% Telenovela
+    6800.0h  0.65% Dramaserie
