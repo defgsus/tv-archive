@@ -27,38 +27,38 @@ Each entry looks like this:
 
 ## Statistics
 
-**109** channels, **1,070,806.2** hours playtime between **2023-01-17** and **2024-10-02**
+**109** channels, **1,070,853.3** hours playtime between **2023-01-17** and **2024-10-02**
 
 
 ### playtime per genre (top 30)
 
-    69646.7h 6.50% Nachrichten
-    49561.0h 4.63% Verkaufsshow
-    44280.3h 4.14% Krimiserie
-    38979.3h 3.64% Werbesendung
-    33550.6h 3.13% Dokureihe
-    32127.2h 3.00% Dokusoap
-    31272.5h 2.92% Regionalmagazin
-    28023.5h 2.62% Dokumentation
-    25661.9h 2.40% *unknown*
-    19899.5h 1.86% Zeichentrickserie
-    19667.5h 1.84% Infomercial
-    19179.7h 1.79% Animationsserie
-    15585.4h 1.46% Comedyserie
-    14980.2h 1.40% Morgenmagazin
-    14572.0h 1.36% Religionsmagazin
-    14120.3h 1.32% Talkshow
-    13821.2h 1.29% Magazin
+    69652.3h 6.50% Nachrichten
+    49547.7h 4.63% Verkaufsshow
+    44282.6h 4.14% Krimiserie
+    38976.3h 3.64% Werbesendung
+    33553.6h 3.13% Dokureihe
+    32134.4h 3.00% Dokusoap
+    31274.6h 2.92% Regionalmagazin
+    28023.0h 2.62% Dokumentation
+    25659.2h 2.40% *unknown*
+    19898.6h 1.86% Zeichentrickserie
+    19670.0h 1.84% Infomercial
+    19179.8h 1.79% Animationsserie
+    15586.0h 1.46% Comedyserie
+    14983.2h 1.40% Morgenmagazin
+    14573.9h 1.36% Religionsmagazin
+    14123.4h 1.32% Talkshow
+    13820.2h 1.29% Magazin
     10589.1h 0.99% E-Sport
-    10286.8h 0.96% Sitcom
-    9697.3h  0.91% Wetterbericht
-    9553.9h  0.89% Programmende
+    10287.1h 0.96% Sitcom
+    9697.1h  0.91% Wetterbericht
+    9553.8h  0.89% Programmende
     9364.2h  0.87% Komödie
-    9330.1h  0.87% Quiz
-    8326.0h  0.78% Börsenmagazin
-    8053.8h  0.75% Politikmagazin
-    8042.5h  0.75% Wissensmagazin
-    8039.3h  0.75% Realityshow
+    9334.0h  0.87% Quiz
+    8325.4h  0.78% Börsenmagazin
+    8056.0h  0.75% Politikmagazin
+    8042.6h  0.75% Wissensmagazin
+    8040.3h  0.75% Realityshow
     7239.8h  0.68% Wirtschaftsmagazin
     7049.3h  0.66% Telenovela
-    6973.4h  0.65% Dramaserie
+    6976.6h  0.65% Dramaserie
