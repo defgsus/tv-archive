@@ -33,23 +33,23 @@ Each entry looks like this:
 ### playtime per genre (top 30)
 
     70651.2h 6.51% Nachrichten
-    50130.8h 4.62% Verkaufsshow
-    44972.2h 4.14% Krimiserie
+    50129.8h 4.62% Verkaufsshow
+    44970.4h 4.14% Krimiserie
     39592.1h 3.65% Werbesendung
-    33962.1h 3.13% Dokureihe
-    32527.0h 3.00% Dokusoap
+    33961.2h 3.13% Dokureihe
+    32526.3h 3.00% Dokusoap
     31730.7h 2.92% Regionalmagazin
-    28406.3h 2.62% Dokumentation
-    25883.4h 2.39% *unknown*
-    20191.2h 1.86% Zeichentrickserie
+    28405.6h 2.62% Dokumentation
+    25915.9h 2.39% *unknown*
+    20187.4h 1.86% Zeichentrickserie
     19949.8h 1.84% Infomercial
-    19436.4h 1.79% Animationsserie
+    19434.6h 1.79% Animationsserie
     15760.2h 1.45% Comedyserie
     15193.0h 1.40% Morgenmagazin
     14703.6h 1.35% Religionsmagazin
-    14326.8h 1.32% Talkshow
+    14326.3h 1.32% Talkshow
     13908.5h 1.28% Magazin
-    10734.1h 0.99% E-Sport
+    10722.8h 0.99% E-Sport
     10445.2h 0.96% Sitcom
     9826.2h  0.91% Wetterbericht
     9664.3h  0.89% Programmende
@@ -60,5 +60,5 @@ Each entry looks like this:
     8177.4h  0.75% Politikmagazin
     8152.9h  0.75% Wissensmagazin
     7330.4h  0.68% Wirtschaftsmagazin
-    7158.6h  0.66% Telenovela
+    7157.8h  0.66% Telenovela
     7093.3h  0.65% Dramaserie
