@@ -27,20 +27,20 @@ Each entry looks like this:
 
 ## Statistics
 
-**109** channels, **1,112,481.8** hours playtime between **2023-01-17** and **2024-10-29**
+**109** channels, **1,112,505.8** hours playtime between **2023-01-17** and **2024-10-29**
 
 
 ### playtime per genre (top 30)
 
     72430.6h 6.51% Nachrichten
-    51208.7h 4.60% Verkaufsshow
+    51228.7h 4.60% Verkaufsshow
     46227.8h 4.16% Krimiserie
-    40767.5h 3.66% Werbesendung
+    40771.5h 3.66% Werbesendung
     34803.6h 3.13% Dokureihe
     33277.3h 2.99% Dokusoap
     32521.5h 2.92% Regionalmagazin
     29179.4h 2.62% Dokumentation
-    26375.7h 2.37% *unknown*
+    26376.7h 2.37% *unknown*
     20769.4h 1.87% Zeichentrickserie
     20479.0h 1.84% Infomercial
     19892.4h 1.79% Animationsserie
