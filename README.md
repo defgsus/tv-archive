@@ -27,38 +27,38 @@ Each entry looks like this:
 
 ## Statistics
 
-**109** channels, **1,150,365.8** hours playtime between **2023-01-17** and **2024-11-22**
+**109** channels, **1,150,125.8** hours playtime between **2023-01-17** and **2024-11-22**
 
 
 ### playtime per genre (top 30)
 
-    75045.1h 6.52% Nachrichten
-    52551.7h 4.57% Verkaufsshow
-    48026.1h 4.17% Krimiserie
-    42357.0h 3.68% Werbesendung
-    35874.1h 3.12% Dokureihe
-    34276.6h 2.98% Dokusoap
-    33689.9h 2.93% Regionalmagazin
-    30229.2h 2.63% Dokumentation
-    27135.5h 2.36% *unknown*
-    21530.1h 1.87% Zeichentrickserie
-    21223.9h 1.84% Infomercial
-    20548.2h 1.79% Animationsserie
-    16478.8h 1.43% Comedyserie
-    16097.4h 1.40% Morgenmagazin
+    75040.5h 6.52% Nachrichten
+    52551.8h 4.57% Verkaufsshow
+    47999.0h 4.17% Krimiserie
+    42341.3h 3.68% Werbesendung
+    35866.8h 3.12% Dokureihe
+    34272.0h 2.98% Dokusoap
+    33677.2h 2.93% Regionalmagazin
+    30222.0h 2.63% Dokumentation
+    27141.6h 2.36% *unknown*
+    21528.9h 1.87% Zeichentrickserie
+    21223.9h 1.85% Infomercial
+    20548.0h 1.79% Animationsserie
+    16474.1h 1.43% Comedyserie
+    16102.9h 1.40% Morgenmagazin
     15322.6h 1.33% Religionsmagazin
-    15237.7h 1.32% Talkshow
-    14360.7h 1.25% Magazin
+    15243.9h 1.33% Talkshow
+    14358.0h 1.25% Magazin
     11364.1h 0.99% E-Sport
-    11145.8h 0.97% Sitcom
-    10412.4h 0.91% Wetterbericht
-    10186.8h 0.89% Quiz
+    11134.0h 0.97% Sitcom
+    10405.1h 0.90% Wetterbericht
+    10177.6h 0.88% Quiz
     10162.0h 0.88% Programmende
-    10093.7h 0.88% Komödie
-    8849.1h  0.77% Realityshow
-    8741.1h  0.76% Politikmagazin
-    8652.4h  0.75% Wissensmagazin
+    10092.1h 0.88% Komödie
+    8838.0h  0.77% Realityshow
+    8740.5h  0.76% Politikmagazin
+    8649.2h  0.75% Wissensmagazin
     8578.9h  0.75% Börsenmagazin
     7706.0h  0.67% Wirtschaftsmagazin
-    7616.0h  0.66% Telenovela
-    7593.3h  0.66% Dramaserie
+    7614.7h  0.66% Telenovela
+    7584.7h  0.66% Dramaserie
