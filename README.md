@@ -40,7 +40,7 @@ Each entry looks like this:
     35268.6h 2.95% Dokusoap
     34939.5h 2.93% Regionalmagazin
     31597.9h 2.65% Dokumentation
-    28228.7h 2.36% *unknown*
+    28226.8h 2.36% *unknown*
     22403.2h 1.88% Zeichentrickserie
     22130.5h 1.85% Infomercial
     21364.9h 1.79% Animationsserie
@@ -56,7 +56,7 @@ Each entry looks like this:
     10569.8h 0.88% Quiz
     10523.5h 0.88% Programmende
     9218.5h  0.77% Realityshow
-    9108.9h  0.76% Politikmagazin
+    9109.1h  0.76% Politikmagazin
     8930.0h  0.75% Wissensmagazin
     8713.0h  0.73% Börsenmagazin
     7960.8h  0.67% Wirtschaftsmagazin
