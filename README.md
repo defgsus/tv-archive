@@ -27,38 +27,38 @@ Each entry looks like this:
 
 ## Statistics
 
-**109** channels, **1,197,923.8** hours playtime between **2023-01-17** and **2024-12-25**
+**109** channels, **1,199,629.1** hours playtime between **2023-01-17** and **2024-12-26**
 
 
 ### playtime per genre (top 30)
 
-    78358.8h 6.54% Nachrichten
-    54406.6h 4.54% Verkaufsshow
-    49861.4h 4.16% Krimiserie
-    44289.2h 3.70% Werbesendung
-    37253.2h 3.11% Dokureihe
-    35335.8h 2.95% Dokusoap
-    35029.1h 2.92% Regionalmagazin
-    31735.5h 2.65% Dokumentation
-    28346.9h 2.37% *unknown*
-    22469.4h 1.88% Zeichentrickserie
-    22185.0h 1.85% Infomercial
-    21406.3h 1.79% Animationsserie
-    16931.5h 1.41% Comedyserie
-    16772.8h 1.40% Morgenmagazin
-    15876.6h 1.33% Talkshow
-    15767.3h 1.32% Religionsmagazin
-    14719.0h 1.23% Magazin
-    11851.3h 0.99% E-Sport
-    11504.8h 0.96% Sitcom
-    10838.4h 0.90% Wetterbericht
-    10732.6h 0.90% Komödie
-    10598.1h 0.88% Quiz
-    10542.0h 0.88% Programmende
-    9255.6h  0.77% Realityshow
-    9141.4h  0.76% Politikmagazin
-    8946.0h  0.75% Wissensmagazin
+    78443.8h 6.54% Nachrichten
+    54457.8h 4.54% Verkaufsshow
+    49896.7h 4.16% Krimiserie
+    44358.1h 3.70% Werbesendung
+    37310.4h 3.11% Dokureihe
+    35359.6h 2.95% Dokusoap
+    35048.7h 2.92% Regionalmagazin
+    31809.3h 2.65% Dokumentation
+    28402.1h 2.37% *unknown*
+    22504.7h 1.88% Zeichentrickserie
+    22207.9h 1.85% Infomercial
+    21428.2h 1.79% Animationsserie
+    16954.7h 1.41% Comedyserie
+    16777.8h 1.40% Morgenmagazin
+    15884.8h 1.32% Talkshow
+    15778.5h 1.32% Religionsmagazin
+    14729.1h 1.23% Magazin
+    11863.1h 0.99% E-Sport
+    11512.5h 0.96% Sitcom
+    10853.8h 0.90% Wetterbericht
+    10819.9h 0.90% Komödie
+    10606.0h 0.88% Quiz
+    10555.7h 0.88% Programmende
+    9260.2h  0.77% Realityshow
+    9156.5h  0.76% Politikmagazin
+    8955.0h  0.75% Wissensmagazin
     8721.7h  0.73% Börsenmagazin
-    7978.2h  0.67% Wirtschaftsmagazin
-    7953.7h  0.66% Arztserie
-    7941.4h  0.66% Dramaserie
+    7982.7h  0.67% Wirtschaftsmagazin
+    7960.0h  0.66% Arztserie
+    7949.5h  0.66% Dramaserie
