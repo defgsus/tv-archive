@@ -4,183 +4,154 @@ import re
 import sys
 import traceback
 import urllib.parse
+from typing import Optional, Union, List, Tuple
 
 import requests
+import bs4
 
-from .util import printe, to_soup
+from .util import printe
 from .scraper import Program, Error, ScraperCallback
 
 
-BASE_URL = "https://www.hoerzu.de"
-_RE_TIME_RANGE = re.compile(r"(\d+):(\d+)\s+bis\s+(\d+):(\d+)")
-_RE_BID = re.compile(r".*bid_(\d+).*")
-_RE_STAFFEL = re.compile(r".*\(Staffel: (\d+) \| Folge: (\d+)\).*")
+class HoerzuScraper:
+    BASE_URL = "https://www.hoerzu.de"
+    USER_AGENT = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/113.0"
 
+    RE_TIME_RANGE = re.compile(r"(\d+):(\d+)\s+bis\s+(\d+):(\d+)")
+    RE_BID = re.compile(r".*bid_(\d+).*")
+    RE_YEAR = re.compile(r".*(\d\d\d\d)")
 
-def scrape_hoerzu(
-        callback: ScraperCallback,
-        future_days: int = 0,
-):
-    session = requests.Session()
-    session.headers.update({
-        "Referer": f"{BASE_URL}/tv-programm/",
-        "Host": "www.hoerzu.de",
-        "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0",
-    })
+    def __init__(self):
+        self.session = requests.Session()
+        self.session.headers.update({
+            "Host": self.BASE_URL.split("//")[-1],
+            "User-Agent": self.USER_AGENT,
+        })
 
-    scrape_hoerzu_overview(session, callback, f"{BASE_URL}/tv-programm/")
+    def scrape(self, callback: ScraperCallback):
+        self.callback = callback
+        channels = self.get_channels()
+        for name, url in channels:
+            self.scrape_channel(name, url)
 
-    if future_days:
-        # TODO: the website does not really work that way
-        #   they only provide the overview for the future day
-        #   but there seems to be no complete page-per-channel for future days
-        today = datetime.date.today()
-        for i in range(1, future_days + 1):
-            date = today + datetime.timedelta(days=i)
-            url = f"{BASE_URL}/tv-programm/{date.strftime('%d.%m.%Y')}/"
-            scrape_hoerzu_overview(session, callback, url)
+    def request(self, url_path: str, params: Optional[dict] = None):
+        url = f"{self.BASE_URL}/{url_path.lstrip('/')}"
+        return self.session.get(
+            url,
+            params=params,
+            headers={
+                "Referer": url,
+            }
+        )
 
+    def get_soup(
+            self,
+            url: str,
+            params: Optional[dict] = None,
+            with_text: bool = False,
+    ) -> Union[bs4.BeautifulSoup, Tuple[bs4.BeautifulSoup, str]]:
+        response = self.request(url, params=params)
+        # need lxml parser because the html dom is buggy ;)
+        soup = bs4.BeautifulSoup(response.text, features="lxml")
+        return (soup, response.text) if with_text else soup
 
-def scrape_hoerzu_overview(session: requests.Session, callback: ScraperCallback, url: str):
-    markups = [
-        session.get(url).text
-    ]
+    def get_channels(self) -> List[Tuple[str, str]]:
+        """Get (name, url) tuples"""
+        soup = self.get_soup("tv-programm/daserste/")
+        div = soup.find("div", {"class": "o-sender-filter__channel-dropdown-list"})
+        channels = []
+        for a in div.find_all("a"):
+            name = a.attrs["data-name"]
+            url = a.attrs["href"]
+            channels.append((name, url))
+        return channels
 
-    response = session.get(
-        f"{url}?getAdditionalPages=true",
-    )
-    markups.extend(response.json()["data"])
-
-    for markup in markups:
-        soup = to_soup(markup)
-
-        for channel_a in soup.find_all("a", {"class": "m-epg-card__channel-logo"}):
-            channel_url = urllib.parse.urljoin(BASE_URL, channel_a.attrs["href"])
-            channel_name = channel_a.attrs["title"]
-
-            printe("hoerzu.de:", channel_name, channel_url)
-
-            try:
-                _scrape_hoerzu_channel(callback, session, channel_url, channel_name)
-
-            except KeyboardInterrupt:
-                return
-
-            except:
-                printe(f"EXCEPTION in {channel_url}")
-                traceback.print_exc(file=sys.stderr)
-                callback(Error(type="channel", url=channel_url))
-
-
-def _scrape_hoerzu_channel(
-        callback: ScraperCallback,
-        session: requests.Session,
-        channel_url: str,
-        channel_name: str,
-):
-    response = session.get(channel_url)
-    soup = to_soup(response.text)
-
-    table_div = soup.find("div", {"class": "m-table__main-table"})
-    if not table_div:
-        printe(f"No program on {channel_url} ({channel_name})")
-        return
-
-    #date_str = table_div.find("h2", {"class": "a-headline"}).text.strip()
-    #date = datetime.datetime.strptime(date_str, "%d.%m.%y")
-
-    for tr in table_div.find("tbody").find_all("tr"):
-        td = tr.find("td", {"class": "m-table__series-label"})
-        if not td:
-            continue
-
-        a = td.find("a")
-        program_url = urllib.parse.urljoin(BASE_URL, a.attrs["href"])
-        program_id = _RE_BID.match(program_url).groups()[0]
-        program_name = a.find("strong").text.strip()
-        program_subtext = a.find("small").text.strip()
-
-        program_season, program_episode = None, None
-        match = _RE_STAFFEL.match(program_subtext)
-        if match:
-            program_season, program_episode = [int(g.lstrip("0") or "0") for g in match.groups()]
-            program_subtext = program_subtext[program_subtext.index(")") + 1:].strip()
-
-
-        date_str = tr.find("td", {"class": "m-table__date-label"}).text.strip()
+    def scrape_channel(self, channel_name: str, url: str):
+        soup = self.get_soup(url)
+        date_str = soup.find("span", {"class": "m-table__date"}).text.strip()
         date_str = date_str.split(",")[-1].strip()
         date = datetime.datetime.strptime(date_str, "%d.%m.%Y")
 
-        time_str = tr.find("td", {"class": "m-table__time-label"}).text.strip().replace("\n", " ")
-        match = _RE_TIME_RANGE.match(time_str)
-        groups = match.groups()
+        first_program_date = None
+        for tr in soup.find_all("tr", {"class": "sender-table-item"}):
+            a = tr.find("a", {"class": "row-link"})
+            program_url = a.attrs["href"]
+            program_id = self.RE_BID.match(program_url).groups()[0]
+            time_str = a.text.strip()
 
-        date_start = date.replace(hour=int(groups[0].lstrip("0") or "0"), minute=int(groups[1].lstrip("0") or "0"))
-        date_end = date.replace(hour=int(groups[2].lstrip("0") or "0"), minute=int(groups[3].lstrip("0") or "0"))
-        while date_end < date_start:
-            date_end += datetime.timedelta(days=1)
+            match = self.RE_TIME_RANGE.match(time_str)
+            groups = match.groups()
 
-        try:
-            extra_info = _scrape_hoerzu_program(session, program_url)
+            date_start = date.replace(
+                hour=int(groups[0].lstrip("0") or "0"),
+                minute=int(groups[1].lstrip("0") or "0"),
+            )
+            date_end = date.replace(
+                hour=int(groups[2].lstrip("0") or "0"),
+                minute=int(groups[3].lstrip("0") or "0"),
+            )
+            while date_end < date_start:
+                date_end += datetime.timedelta(days=1)
 
-            if extra_info.get("countries"):
-                for country in reversed(extra_info["countries"]):
-                    if not program_subtext.endswith(country):
-                        break
-                    program_subtext = program_subtext[:-len(country)].rstrip(", ")
+            if first_program_date is None:
+                first_program_date = date_start
 
-        except KeyboardInterrupt:
-            raise
+            else:
+                while date_start < first_program_date:
+                    date_start += datetime.timedelta(days=1)
+                    date_end += datetime.timedelta(days=1)
 
-        except:
-            printe(f"EXCEPTION IN {channel_name}: {program_url}")
-            traceback.print_exc(file=sys.stderr)
-            callback(Error(type="program-details", url=program_url))
-            extra_info = {}
+            td = tr.find("td", {"class": "m-table__series-label"})
+            title = td.find("a").attrs["title"]
+            sub_texts = td.find("a").find("small").text.strip().split("•")
 
-        callback(Program(
-            id=program_id,
-            url=program_url,
-            channel=channel_name,
-            title=program_name,
-            sub_title=program_subtext,
-            date=date_start,
-            length=int((date_end - date_start).total_seconds() // 60),
-            season=program_season,
-            episode=program_episode,
-            **extra_info,
-        ))
+            td = tr.find("td", {"class": "m-table__genre"})
+            genre = td.text.strip()
 
+            try:
+                extra_info = self.scrape_program(program_url)
+            except Exception as e:
+                print(f"EXCEPTION: {program_url}, {type(e).__name__}: {e}")
+                extra_info = {}
 
-def _scrape_hoerzu_program(
-        session: requests.Session,
-        program_url: str,
-) -> dict:
-    response = session.get(program_url)
-    soup = to_soup(response.text)
+            self.callback(Program(
+                id=program_id,
+                url=url,
+                channel=channel_name,
+                title=title,
+                date=date_start,
+                length=int((date_end - date_start).total_seconds() / 60),
+                genre=genre,
+                sub_genre=sub_texts[0].strip(),
+                countries=[c.strip() for c in sub_texts[1].split(",")],
+                **extra_info,
+            ))
+            # break
 
-    div = soup.find("div", {"class": "o-epg_stage__header"})
+    def scrape_program(self, url: str) -> dict:
+        soup, markup = self.get_soup(url, with_text=True, params={"type": "modal"})
+        extra_data = {}
 
-    # title = div.find("h1").text.strip()
-    info_str = div.find("div", {"class": "o-epg_stage__series-info"}).text.strip()
-    infos = [i.strip() for i in info_str.split("•")]
-    try:
-        year = int(infos[1][-4:])
-        countries = infos[1][:-4]
-    except:
-        year = None
-        countries = infos[1]
+        div = soup.find("div", {"class": "p-epg-modal uk-modal-dialog"})
+        if div:
+            extra_data["genres"] = div.attrs["data-genres"].split(",")
 
-    countries = [c.strip() for c in countries.split(",")]
+        infos = soup.find("div", {"class": "o-epg_stage__series-info"}).text.split("•")
+        year_match = self.RE_YEAR.match(infos[1].strip())
+        if year_match:
+            extra_data["year"] = int(year_match.groups()[0])
 
-    description = None
-    div = soup.find("div", {"class": "p-epg-modal__description"})
-    if div:
-        description = div.text.strip()
+        h3 = soup.find("h3", {"class": "p-epg-modal__descriptionSubHeadline"})
+        if h3:
+            h_texts = h3.text.split(",", 2)
+            while h_texts:
+                h_text = h_texts.pop(0).strip()
+                if h_text.startswith("Staffel"):
+                    extra_data["season"] = int(h_text.split()[-1])
+                elif h_text.startswith("Folge"):
+                    extra_data["episode"] = int(h_text.split()[-1])
+                else:
+                    extra_data["sub_title"] = h_text
 
-    return {
-        "genre": infos[0],
-        "year": year,
-        "countries": countries,
-        "description": description,
-    }
+        extra_data["description"] = soup.find("div", {"class": "p-epg-modal__description"}).text.strip()
+        return extra_data

@@ -18,6 +18,8 @@ class Program:
     length: int  # minutes
     sub_title: Optional[str] = None
     genre: Optional[str] = None
+    sub_genre: Optional[str] = None
+    genres: Optional[List[str]] = None
     description: Optional[str] = None
     season: Optional[int] = None
     episode: Optional[int] = None

@@ -3,7 +3,7 @@ import datetime
 
 from src import DATA_PATH, PROJECT_PATH
 from src.scraper import Scraper
-from src.hoerzu import scrape_hoerzu
+from src.hoerzu import HoerzuScraper
 from src.util import printe
 from src.access import iter_programs
 
@@ -21,7 +21,8 @@ def main(command: str):
     if command == "scrape":
         with Scraper() as scraper:
 
-            scraper.scrape(scrape_hoerzu)
+            hoerzu = HoerzuScraper()
+            scraper.scrape(hoerzu.scrape)
             print(scraper.commit_message())
 
     elif command == "stats":
