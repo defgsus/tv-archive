@@ -4,6 +4,8 @@ import re
 import sys
 import traceback
 import urllib.parse
+from functools import partial
+from multiprocessing.pool import ThreadPool
 from typing import Optional, Union, List, Tuple
 
 import requests
@@ -21,7 +23,8 @@ class HoerzuScraper:
     RE_BID = re.compile(r".*bid_(\d+).*")
     RE_YEAR = re.compile(r".*(\d\d\d\d)")
 
-    def __init__(self):
+    def __init__(self, num_threads: int = 1):
+        self.num_threads = num_threads
         self.session = requests.Session()
         self.session.headers.update({
             "Host": self.BASE_URL.split("//")[-1],
@@ -31,8 +34,13 @@ class HoerzuScraper:
     def scrape(self, callback: ScraperCallback):
         self.callback = callback
         channels = self.get_channels()
-        for name, url in channels:
-            self.scrape_channel(name, url)
+
+        if self.num_threads <= 1:
+            for name, url in channels:
+                self.scrape_channel(name, url)
+        else:
+            pool = ThreadPool(8)
+            pool.map(lambda t: self.scrape_channel(*t), channels)
 
     def request(
             self,

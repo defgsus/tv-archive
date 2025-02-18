@@ -1,6 +1,8 @@
 import argparse
 import datetime
 
+from tqdm import tqdm
+
 from src import DATA_PATH, PROJECT_PATH
 from src.scraper import Scraper
 from src.hoerzu import HoerzuScraper
@@ -15,21 +17,24 @@ def parse_args() -> dict:
         choices=["scrape", "stats", "write-stats"],
     )
     parser.add_argument(
+        "-j", "--threads", type=int, default=1,
+    )
+    parser.add_argument(
         "-v", "--verbose", type=bool, nargs="?", default=False, const=True,
     )
     return vars(parser.parse_args())
 
 
-def main(command: str, verbose: bool):
+def main(command: str, verbose: bool, threads: int):
     if command == "scrape":
         with Scraper(verbose=verbose) as scraper:
 
-            hoerzu = HoerzuScraper()
+            hoerzu = HoerzuScraper(num_threads=threads)
             scraper.scrape(hoerzu.scrape)
             print(scraper.commit_message())
 
     elif command == "stats":
-        print(create_stats_str())
+        print(create_stats_str(verbose=verbose))
 
     elif command == "write-stats":
         write_stats()
@@ -39,14 +44,16 @@ def main(command: str, verbose: bool):
         exit(1)
 
 
-def create_stats_str() -> str:
+def create_stats_str(verbose: bool = False) -> str:
     top_count = 30
 
     channel_set = set()
     genre_counter = {}
     all_play_time = 0
+    num_programs = 0
     date_min, date_max = None, None
-    for program in iter_programs():
+    for program in tqdm(iter_programs(), disable=not verbose):
+        num_programs += 1
         key = program.genre or "*unknown*"
         all_play_time += program.length
         genre_counter[key] = genre_counter.get(key, 0) + program.length
@@ -59,6 +66,7 @@ def create_stats_str() -> str:
 
     stats_str = (
         f"**{len(channel_set)}** channels"
+        f", **{num_programs:,}*** programs"
         f", **{all_play_time/60:,.1f}** hours playtime"
         f" between **{date_min.date()}** and **{date_max.date()}**\n"
     )
@@ -67,7 +75,7 @@ def create_stats_str() -> str:
     sorted_genres = sorted(genre_counter, key=lambda k: genre_counter[k], reverse=True)
     values = [
         (
-            f"{genre_counter[key] / 60:.1f}h",
+            f"{genre_counter[key] / 60:,.1f}h",
             f"{genre_counter[key] / all_play_time * 100:.2f}%",
             key,
         )

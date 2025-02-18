@@ -3,6 +3,7 @@ import json
 import os
 from pathlib import Path
 from dataclasses import dataclass
+from threading import Lock
 from typing import Callable, Optional, List, IO, Union, Any, Dict
 
 from . import DATA_PATH
@@ -45,6 +46,7 @@ class Scraper:
         self._error_count = {}
         self._channel_count = {}
         self._file_date = None
+        self._lock = Lock()
 
     def __enter__(self):
         return self
@@ -58,19 +60,20 @@ class Scraper:
         scraper(self._callback)
 
     def _callback(self, program: Union[Program, Error]):
-        if isinstance(program, Program):
-            if self.verbose:
-                printe(program.channel, program.date, program.length, program.title)
-            self._store_program(program)
+        with self._lock:
+            if isinstance(program, Program):
+                if self.verbose:
+                    printe(program.channel, program.date, program.length, program.title)
+                self._store_program(program)
 
-            if program.channel not in self._channel_count:
-                self._channel_count[program.channel] = 0
-            self._channel_count[program.channel] += 1
+                if program.channel not in self._channel_count:
+                    self._channel_count[program.channel] = 0
+                self._channel_count[program.channel] += 1
 
-        else:
-            if program.type not in self._error_count:
-                self._error_count[program.type] = 0
-            self._error_count[program.type] += 1
+            else:
+                if program.type not in self._error_count:
+                    self._error_count[program.type] = 0
+                self._error_count[program.type] += 1
 
     def _store_program(self, program: Program):
         # since 2023-02-19, we always store into ONE ndjson file
