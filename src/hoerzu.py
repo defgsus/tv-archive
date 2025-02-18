@@ -33,7 +33,7 @@ class HoerzuScraper:
         channels = self.get_channels()
         for name, url in channels:
             self.scrape_channel(name, url)
-        
+
     def request(
             self,
             url_path: str,

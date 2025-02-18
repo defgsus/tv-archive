@@ -44,6 +44,7 @@ class Scraper:
         self.output_files: Dict[datetime.date, IO[str]] = {}
         self._error_count = {}
         self._channel_count = {}
+        self._file_date = None
 
     def __enter__(self):
         return self
@@ -72,7 +73,12 @@ class Scraper:
             self._error_count[program.type] += 1
 
     def _store_program(self, program: Program):
-        date = program.date.date()
+        # since 2023-02-19, we always store into ONE ndjson file
+        # otherwise one needs to go through the git history to collect
+        # programs played at night (0:00 - 5:00)
+        if self._file_date is None:
+            self._file_date = program.date.date()
+        date = self._file_date
         if date not in self.output_files:
             filename = DATA_PATH / f"{date.year:04}" / f"{date.month:02}" / f"{date.strftime('%Y-%m-%d')}.ndjson"
             os.makedirs(filename.parent, exist_ok=True)
