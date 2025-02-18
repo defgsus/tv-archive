@@ -6,6 +6,7 @@ from dataclasses import dataclass
 from typing import Callable, Optional, List, IO, Union, Any, Dict
 
 from . import DATA_PATH
+from .util import printe
 
 
 @dataclass
@@ -38,7 +39,8 @@ ScraperCallback = Callable[[Union[Program, Error]], None]
 
 class Scraper:
 
-    def __init__(self):
+    def __init__(self, verbose: bool = False):
+        self.verbose = verbose
         self.output_files: Dict[datetime.date, IO[str]] = {}
         self._error_count = {}
         self._channel_count = {}
@@ -56,6 +58,8 @@ class Scraper:
 
     def _callback(self, program: Union[Program, Error]):
         if isinstance(program, Program):
+            if self.verbose:
+                printe(program.channel, program.date, program.length, program.title)
             self._store_program(program)
 
             if program.channel not in self._channel_count:

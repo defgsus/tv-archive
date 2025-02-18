@@ -14,12 +14,15 @@ def parse_args() -> dict:
         "command", type=str,
         choices=["scrape", "stats", "write-stats"],
     )
+    parser.add_argument(
+        "-v", "--verbose", type=bool, nargs="?", default=False, const=True,
+    )
     return vars(parser.parse_args())
 
 
-def main(command: str):
+def main(command: str, verbose: bool):
     if command == "scrape":
-        with Scraper() as scraper:
+        with Scraper(verbose=verbose) as scraper:
 
             hoerzu = HoerzuScraper()
             scraper.scrape(hoerzu.scrape)

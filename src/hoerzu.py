@@ -9,7 +9,7 @@ from typing import Optional, Union, List, Tuple
 import requests
 import bs4
 
-from .util import printe
+from .util import printe, to_soup
 from .scraper import Program, Error, ScraperCallback
 
 
@@ -33,14 +33,19 @@ class HoerzuScraper:
         channels = self.get_channels()
         for name, url in channels:
             self.scrape_channel(name, url)
-
-    def request(self, url_path: str, params: Optional[dict] = None):
+        
+    def request(
+            self,
+            url_path: str,
+            params: Optional[dict] = None,
+            referer: Optional[str] = None,
+    ):
         url = f"{self.BASE_URL}/{url_path.lstrip('/')}"
         return self.session.get(
             url,
             params=params,
             headers={
-                "Referer": url,
+                "Referer": referer or url,
             }
         )
 
@@ -67,7 +72,22 @@ class HoerzuScraper:
         return channels
 
     def scrape_channel(self, channel_name: str, url: str):
-        soup = self.get_soup(url)
+        #soup = self.get_soup(url)
+        # instead of channel url^ we request the ajax (html) api
+        # to start at an early time
+        channel_code = url.rstrip("/").split("/")[-1]
+        response = self.request(
+            "ajax/sender-tv-json/",
+            params={
+                "channel": channel_code,
+                "channelGroup": "default",
+                "date": "heute",
+                "time": "05:00",
+                "initial": "true",
+            },
+            referer=f"{self.BASE_URL}/{url.lstrip('/')}"
+        )
+        soup = to_soup(response.json()["data"])
         date_str = soup.find("span", {"class": "m-table__date"}).text.strip()
         date_str = date_str.split(",")[-1].strip()
         date = datetime.datetime.strptime(date_str, "%d.%m.%Y")
@@ -126,7 +146,6 @@ class HoerzuScraper:
                 countries=[c.strip() for c in sub_texts[1].split(",")],
                 **extra_info,
             ))
-            # break
 
     def scrape_program(self, url: str) -> dict:
         soup, markup = self.get_soup(url, with_text=True, params={"type": "modal"})
