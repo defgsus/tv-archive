@@ -22,6 +22,8 @@ class HoerzuScraper:
     RE_TIME_RANGE = re.compile(r"(\d+):(\d+)\s+bis\s+(\d+):(\d+)")
     RE_BID = re.compile(r".*bid_(\d+).*")
     RE_YEAR = re.compile(r".*(\d\d\d\d)")
+    RE_SEASON = re.compile(r"Staffel\s+(\d+)")
+    RE_EPISODE = re.compile(r"Folge\s+(\d+)")
 
     def __init__(self, num_threads: int = 1):
         self.num_threads = num_threads
@@ -173,12 +175,12 @@ class HoerzuScraper:
             h_texts = h3.text.split(",", 2)
             while h_texts:
                 h_text = h_texts.pop(0).strip()
-                if h_text.startswith("Staffel"):
-                    extra_data["season"] = int(h_text.split()[-1])
-                elif h_text.startswith("Folge"):
-                    extra_data["episode"] = int(h_text.split()[-1])
+                if match := self.RE_SEASON.match(h_text):
+                    extra_data["season"] = int(match.groups()[0])
+                elif match := self.RE_EPISODE.match(h_text):
+                    extra_data["episode"] = int(match.groups()[0])
                 else:
                     extra_data["sub_title"] = h_text
 
-        extra_data["description"] = soup.find("div", {"class": "p-epg-modal__description"}).text.strip()
+        extra_data["description"] = soup.find("div", {"class": "p-epg-modal__description"}).text.strip() or None
         return extra_data

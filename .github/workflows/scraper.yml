@@ -17,7 +17,7 @@ jobs:
           pip install -r requirements.txt
       - name: scraper
         run: |
-          python main.py scrape > commit-message.md
+          python main.py scrape -j 4 > commit-message.md
           cat commit-message.md
       - name: update statistics
         run: |
