@@ -7,7 +7,8 @@ from src import DATA_PATH, PROJECT_PATH
 from src.scraper import Scraper
 from src.hoerzu import HoerzuScraper
 from src.util import printe
-from src.access import iter_programs
+
+from src.access import iter_programs_through_commits as iter_programs
 
 
 def parse_args() -> dict:
@@ -52,8 +53,10 @@ def create_stats_str(verbose: bool = False) -> str:
     all_play_time = 0
     num_programs = 0
     date_min, date_max = None, None
-    # from src.access import iter_programs_through_commits as iter_programs
+
     for program in tqdm(iter_programs(), disable=not verbose):
+        program = program.cleaned()
+
         num_programs += 1
         key = program.genre or "*unknown*"
         all_play_time += program.length
