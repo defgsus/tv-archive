@@ -37,7 +37,7 @@ def main(command: str, verbose: bool, threads: int):
         print(create_stats_str(verbose=verbose))
 
     elif command == "write-stats":
-        write_stats()
+        write_stats(verbose=verbose)
 
     else:
         printe(f"Invalid command '{command}'")
@@ -52,6 +52,7 @@ def create_stats_str(verbose: bool = False) -> str:
     all_play_time = 0
     num_programs = 0
     date_min, date_max = None, None
+    # from src.access import iter_programs_through_commits as iter_programs
     for program in tqdm(iter_programs(), disable=not verbose):
         num_programs += 1
         key = program.genre or "*unknown*"
@@ -89,12 +90,12 @@ def create_stats_str(verbose: bool = False) -> str:
     return f"## Statistics\n\n{stats_str}"
 
 
-def write_stats():
+def write_stats(verbose: bool = False):
     readme = (PROJECT_PATH / "README.md").read_text()
 
     readme = readme[:readme.index("## Statistics")]
 
-    readme += create_stats_str()
+    readme += create_stats_str(verbose=verbose)
 
     (PROJECT_PATH / "README.md").write_text(readme)
 
