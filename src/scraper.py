@@ -1,6 +1,8 @@
 import datetime
 import json
 import os
+import re
+from copy import copy
 from pathlib import Path
 from dataclasses import dataclass
 from threading import Lock
@@ -8,6 +10,10 @@ from typing import Callable, Optional, List, IO, Union, Any, Dict
 
 from . import DATA_PATH
 from .util import printe
+from .cleaner import cleaned_program
+
+
+_UPDATED_SCRAPER_DATE = datetime.datetime(2025, 2, 19)
 
 
 @dataclass
@@ -27,6 +33,17 @@ class Program:
     episode: Optional[int] = None
     year: Optional[int] = None
     countries: Optional[List[str]] = None
+
+    def cleaned(self) -> "Program":
+        """
+        Applies some fixes to individual fields that happened when scraping the program.
+
+        It's a heuristic approach but better than nothing. I encourage to use this
+        before calculating any metrics.
+
+        :return: new Program instance
+        """
+        return cleaned_program(self)
 
 
 @dataclass
