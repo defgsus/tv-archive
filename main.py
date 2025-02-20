@@ -1,5 +1,6 @@
 import argparse
 import datetime
+from typing import Optional, List
 
 from tqdm import tqdm
 
@@ -23,14 +24,17 @@ def parse_args() -> dict:
     parser.add_argument(
         "-v", "--verbose", type=bool, nargs="?", default=False, const=True,
     )
+    parser.add_argument(
+        "-f", "--filter", type=str, nargs="+", default=None,
+    )
     return vars(parser.parse_args())
 
 
-def main(command: str, verbose: bool, threads: int):
+def main(command: str, verbose: bool, threads: int, filter: Optional[List[str]]):
     if command == "scrape":
         with Scraper(verbose=verbose) as scraper:
 
-            hoerzu = HoerzuScraper(num_threads=threads)
+            hoerzu = HoerzuScraper(num_threads=threads, filter=filter)
             scraper.scrape(hoerzu.scrape)
             print(scraper.commit_message())
 

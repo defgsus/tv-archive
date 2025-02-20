@@ -80,7 +80,9 @@ class Scraper:
         with self._lock:
             if isinstance(program, Program):
                 if self.verbose:
-                    printe(program.channel, program.date, program.length, program.title)
+                    printe(
+                        f"{program.date} {program.channel:20} {program.length}m {program.title}"
+                    )
                 self._store_program(program)
 
                 if program.channel not in self._channel_count:

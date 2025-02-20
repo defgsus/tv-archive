@@ -25,8 +25,9 @@ class HoerzuScraper:
     RE_SEASON = re.compile(r"Staffel\s+(\d+)")
     RE_EPISODE = re.compile(r"Folge\s+(\d+)")
 
-    def __init__(self, num_threads: int = 1):
+    def __init__(self, num_threads: int = 1, filter: Optional[List[str]] = None):
         self.num_threads = num_threads
+        self.filter = filter
         self.session = requests.Session()
         self.session.headers.update({
             "Host": self.BASE_URL.split("//")[-1],
@@ -78,7 +79,8 @@ class HoerzuScraper:
         for a in div.find_all("a"):
             name = a.attrs["data-name"]
             url = a.attrs["href"]
-            channels.append((name, url))
+            if not self.filter or name in self.filter:
+                channels.append((name, url))
         return channels
 
     def scrape_channel(self, channel_name: str, url: str):
@@ -97,7 +99,12 @@ class HoerzuScraper:
             },
             referer=f"{self.BASE_URL}/{url.lstrip('/')}"
         )
-        soup = to_soup(response.json()["data"])
+        try:
+            soup = to_soup(response.json()["data"])
+        except Exception as e:
+            self.callback(Error(f"{type(e).__name__}: {e}", response.url))
+            return
+
         date_str = soup.find("span", {"class": "m-table__date"}).text.strip()
         date_str = date_str.split(",")[-1].strip()
         date = datetime.datetime.strptime(date_str, "%d.%m.%Y")
