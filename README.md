@@ -27,38 +27,38 @@ Each entry looks like this:
 
 ## Statistics
 
-**195** channels, **2,642,883*** programs, **1,735,667.1** hours playtime between **2023-01-17** and **2025-02-20**
+**195** channels, **2,010,329*** programs, **1,289,420.3** hours playtime between **2023-01-17** and **2025-02-21**
 
 
 ### playtime per genre (top 30)
 
-    418,356.6h 24.10% Serie
-    305,892.1h 17.62% Magazin
-    213,796.6h 12.32% Dokumentation
-    177,626.9h 10.23% Werbung
-    169,665.2h 9.78%  Show
-    129,712.8h 7.47%  Nachrichten
-    114,524.1h 6.60%  Spielfilm
-    58,474.0h  3.37%  Sport
-    39,363.6h  2.27%  Reportage
-    18,520.5h  1.07%  Musik
-    17,127.9h  0.99%  Programmende
-    14,199.0h  0.82%  E-Sport
-    12,957.0h  0.75%  Wetter
-    8,410.6h   0.48%  Verschiedenes
-    7,688.1h   0.44%  Videoclip
-    6,492.1h   0.37%  Bericht
-    5,425.1h   0.31%  Event
-    5,237.8h   0.30%  *unknown*
-    2,418.7h   0.14%  Verkaufsshow
-    1,600.2h   0.09%  Porno Clips
-    1,395.5h   0.08%  Nachtprogramm
-    599.1h     0.03%  Kurzfilm
-    526.1h     0.03%  Erotikfilm
-    517.3h     0.03%  Dokureihe
-    487.2h     0.03%  Eishockey
-    356.7h     0.02%  Judo
-    354.5h     0.02%  Handball
-    293.9h     0.02%  Darts
-    272.0h     0.02%  Leichtathletik
-    236.6h     0.01%  Gespräch
+    326,709.4h 25.34% Serie
+    232,158.9h 18.00% Magazin
+    151,675.2h 11.76% Dokumentation
+    129,266.4h 10.03% Werbung
+    122,542.1h 9.50%  Show
+    100,682.8h 7.81%  Nachrichten
+    74,910.2h  5.81%  Spielfilm
+    47,463.6h  3.68%  Sport
+    27,970.2h  2.17%  Reportage
+    15,041.9h  1.17%  Musik
+    11,549.0h  0.90%  Wetter
+    11,167.4h  0.87%  Programmende
+    9,515.0h   0.74%  E-Sport
+    6,369.2h   0.49%  Verschiedenes
+    5,464.4h   0.42%  Bericht
+    4,649.6h   0.36%  Event
+    3,541.9h   0.27%  *unknown*
+    2,045.6h   0.16%  Verkaufsshow
+    1,910.1h   0.15%  Videoclip
+    353.9h     0.03%  Eishockey
+    329.5h     0.03%  Kurzfilm
+    299.8h     0.02%  Judo
+    257.0h     0.02%  Darts
+    232.8h     0.02%  Handball
+    219.5h     0.02%  Dokureihe
+    212.4h     0.02%  Leichtathletik
+    190.7h     0.01%  Gespräch
+    169.7h     0.01%  Erotikfilm
+    157.3h     0.01%  Fußball
+    147.0h     0.01%  Wirtschaftsmagazin
