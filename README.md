@@ -27,36 +27,36 @@ Each entry looks like this:
 
 ## Statistics
 
-**195** channels, **2,249,801*** programs, **1,461,129.3** hours playtime between **2023-01-17** and **2025-04-02**
+**195** channels, **2,255,934*** programs, **1,465,449.0** hours playtime between **2023-01-17** and **2025-04-03**
 
 
 ### playtime per genre (top 30)
 
-    374,492.1h 25.63% Serie
-    252,574.6h 17.29% Magazin
-    174,064.9h 11.91% Dokumentation
-    140,092.3h 9.59%  Werbung
-    136,319.7h 9.33%  Show
-    107,445.1h 7.35%  Nachrichten
-    93,158.5h  6.38%  Spielfilm
-    64,641.2h  4.42%  Sport
-    30,789.2h  2.11%  Reportage
-    21,006.4h  1.44%  Musik
-    12,263.5h  0.84%  Wetter
+    375,745.3h 25.64% Serie
+    253,091.9h 17.27% Magazin
+    174,630.4h 11.92% Dokumentation
+    140,364.6h 9.58%  Werbung
+    136,659.6h 9.33%  Show
+    107,640.1h 7.35%  Nachrichten
+    93,558.6h  6.38%  Spielfilm
+    65,064.9h  4.44%  Sport
+    30,858.1h  2.11%  Reportage
+    21,147.8h  1.44%  Musik
+    12,284.2h  0.84%  Wetter
     11,167.4h  0.76%  Programmende
     9,515.0h   0.65%  E-Sport
-    9,382.7h   0.64%  Verschiedenes
-    5,802.9h   0.40%  Bericht
-    4,990.3h   0.34%  Event
+    9,457.1h   0.65%  Verschiedenes
+    5,818.3h   0.40%  Bericht
+    4,992.8h   0.34%  Event
     3,541.9h   0.24%  *unknown*
-    2,289.7h   0.16%  Videoclip
+    2,299.7h   0.16%  Videoclip
     2,045.6h   0.14%  Verkaufsshow
-    1,086.4h   0.07%  Kurzfilm
+    1,105.8h   0.08%  Kurzfilm
     353.9h     0.02%  Eishockey
     299.8h     0.02%  Judo
     257.0h     0.02%  Darts
     232.8h     0.02%  Handball
-    219.5h     0.02%  Dokureihe
+    219.5h     0.01%  Dokureihe
     212.4h     0.01%  Leichtathletik
     190.7h     0.01%  Gespräch
     169.7h     0.01%  Erotikfilm
