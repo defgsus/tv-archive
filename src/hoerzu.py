@@ -164,7 +164,7 @@ class HoerzuScraper:
 
             self.callback(Program(
                 id=program_id,
-                url=url,
+                url=program_url,
                 channel=channel_name,
                 title=title,
                 date=date_start,
