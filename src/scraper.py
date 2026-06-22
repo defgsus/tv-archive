@@ -62,6 +62,8 @@ class Scraper:
         self.output_files: Dict[datetime.date, IO[str]] = {}
         self._error_count = {}
         self._channel_count = {}
+        self._missing_counts = {}
+        self._callback_count = 0
         self._file_date = None
         self._lock = Lock()
 
@@ -89,10 +91,16 @@ class Scraper:
                     self._channel_count[program.channel] = 0
                 self._channel_count[program.channel] += 1
 
+                for key in ("season", "year", "description", "genres"):
+                    if getattr(program, key) is None:
+                        self._missing_counts[key] = self._missing_counts.get(key, 0) + 1
+
+                self._callback_count += 1
+                if self.verbose and self._callback_count % 100 == 0:
+                    printe(f"{self._callback_count} programs, missings: {self._missing_counts}")
+
             else:
-                if program.type not in self._error_count:
-                    self._error_count[program.type] = 0
-                self._error_count[program.type] += 1
+                self._error_count[program.type] = self._error_count.get(program.type, 0) + 1
 
     def _store_program(self, program: Program):
         # since 2023-02-19, we always store into ONE ndjson file
@@ -112,6 +120,11 @@ class Scraper:
     def commit_message(self) -> str:
         msg = f"update at {datetime.datetime.utcnow().isoformat()} UTC"
 
+        msg += (
+            f"\n\nchannels: {len(self._channel_count):,}"
+            f", programs: {sum(self._channel_count.values()):,}"
+        )
+
         if self._error_count:
             msg += "\n\n### ERRORS\n\n"
             for key in sorted(self._error_count):
@@ -124,7 +137,7 @@ class Scraper:
                 channel = f"{key}:"
                 msg += f"{channel:{max_length}} {self._channel_count[key]}\n"
 
-        return msg
+        return msg.replace("\x00", "")
 
 
 class _JsonEncoder(json.JSONEncoder):

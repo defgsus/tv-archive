@@ -74,8 +74,8 @@ def create_stats_str(verbose: bool = False) -> str:
 
     stats_str = (
         f"**{len(channel_set)}** channels"
-        f", **{num_programs:,}*** programs"
-        f", **{all_play_time/60:,.1f}** hours playtime"
+        f", **{num_programs:,}** programs"
+        f", **{int(all_play_time/60):,}** hours playtime"
         f" between **{date_min.date()}** and **{date_max.date()}**\n"
     )
     stats_str += f"\n\n### playtime per genre (top {top_count})\n\n"

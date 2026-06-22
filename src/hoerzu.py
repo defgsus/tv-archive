@@ -81,24 +81,32 @@ class HoerzuScraper:
             url = a.attrs["href"]
             if not self.filter or name in self.filter:
                 channels.append((name, url))
-        return channels
+        return channels[:8]
 
     def scrape_channel(self, channel_name: str, url: str):
         #soup = self.get_soup(url)
         # instead of channel url^ we request the ajax (html) api
         # to start at an early time
         channel_code = url.rstrip("/").split("/")[-1]
-        response = self.request(
-            "ajax/sender-tv-json/",
-            params={
-                "channel": channel_code,
-                "channelGroup": "default",
-                "date": "heute",
-                "time": "05:00",
-                "initial": "true",
-            },
-            referer=f"{self.BASE_URL}/{url.lstrip('/')}"
-        )
+        try:
+            response = self.request(
+                "ajax/sender-tv-json/",
+                params={
+                    "channel": channel_code,
+                    "channelGroup": "default",
+                    "date": "heute",
+                    "time": "05:00",
+                    "initial": "true",
+                },
+                referer=f"{self.BASE_URL}/{url.lstrip('/')}"
+            )
+        except Exception as e:
+            printe(
+                f"EXCEPTION: ajax/sender-tv-json/, {type(e).__name__}: {e}",
+            )
+            self.callback(Error(f"{type(e).__name__}: {e}", "ajax/sender-tv-json/"))
+            return
+
         try:
             soup = to_soup(response.json()["data"])
         except Exception as e:
@@ -148,7 +156,10 @@ class HoerzuScraper:
             try:
                 extra_info = self.scrape_program(program_url)
             except Exception as e:
-                print(f"EXCEPTION: {program_url}, {type(e).__name__}: {e}")
+                printe(
+                    f"EXCEPTION: {program_url}, {type(e).__name__}: {e} {traceback.format_exc(2)}",
+                )
+                self.callback(Error(f"{type(e).__name__}: {e}", program_url))
                 extra_info = {}
 
             self.callback(Program(
@@ -172,12 +183,16 @@ class HoerzuScraper:
         if div:
             extra_data["genres"] = div.attrs["data-genres"].split(",")
 
-        infos = soup.find("div", {"class": "o-epg_stage__series-info"}).text.split("•")
-        year_match = self.RE_YEAR.match(infos[1].strip())
-        if year_match:
-            extra_data["year"] = int(year_match.groups()[0])
+        infos = soup.find("div", {"class": "o-epg_stage__series-info"})
+        if infos:
+            infos = infos.text.split("•")
+            year_match = self.RE_YEAR.match(infos[1].strip())
+            if year_match:
+                extra_data["year"] = int(year_match.groups()[0])
 
         h3 = soup.find("h3", {"class": "p-epg-modal__descriptionSubHeadline"})
+        if not h3:
+            h3 = soup.find("h3", {"class": "p-epg-modal__descriptionHeadline"})
         if h3:
             h_texts = h3.text.split(",", 2)
             while h_texts:
@@ -189,5 +204,10 @@ class HoerzuScraper:
                 else:
                     extra_data["sub_title"] = h_text
 
-        extra_data["description"] = soup.find("div", {"class": "p-epg-modal__description"}).text.strip() or None
+        div = soup.find("div", {"class": "p-epg-modal__description"})
+        if not div:
+            div = soup.find("div", {"id": "beschreibung"})
+        if div:
+            extra_data["description"] = div.text.strip() or None
+
         return extra_data
