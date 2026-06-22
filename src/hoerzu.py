@@ -42,7 +42,7 @@ class HoerzuScraper:
             for name, url in channels:
                 self.scrape_channel(name, url)
         else:
-            pool = ThreadPool(8)
+            pool = ThreadPool(self.num_threads)
             pool.map(lambda t: self.scrape_channel(*t), channels)
 
     def request(
