@@ -34,7 +34,7 @@ def main(command: str, verbose: bool, threads: int, filter: Optional[List[str]])
     if command == "scrape":
         with Scraper(verbose=verbose) as scraper:
 
-            hoerzu = HoerzuScraper(num_threads=threads, filter=filter)
+            hoerzu = HoerzuScraper(num_threads=threads, filter=filter, verbose=verbose)
             scraper.scrape(hoerzu.scrape)
             print(scraper.commit_message())
 

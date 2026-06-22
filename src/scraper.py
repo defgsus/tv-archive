@@ -7,6 +7,7 @@ from pathlib import Path
 from dataclasses import dataclass
 from threading import Lock
 from typing import Callable, Optional, List, IO, Union, Any, Dict
+from threading import current_thread
 
 from . import DATA_PATH
 from .util import printe
@@ -83,7 +84,7 @@ class Scraper:
             if isinstance(program, Program):
                 if self.verbose:
                     printe(
-                        f"{program.date} {program.channel:20} {program.length}m {program.title}"
+                        f"{current_thread().name}: {program.date} {program.channel:20} {program.length}m {program.title}"
                     )
                 self._store_program(program)
 

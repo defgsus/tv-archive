@@ -6,6 +6,7 @@ import traceback
 import urllib.parse
 from functools import partial
 from multiprocessing.pool import ThreadPool
+from threading import current_thread
 from typing import Optional, Union, List, Tuple
 
 import requests
@@ -25,9 +26,15 @@ class HoerzuScraper:
     RE_SEASON = re.compile(r"Staffel\s+(\d+)")
     RE_EPISODE = re.compile(r"Folge\s+(\d+)")
 
-    def __init__(self, num_threads: int = 1, filter: Optional[List[str]] = None):
+    def __init__(
+            self,
+            num_threads: int = 1,
+            filter: Optional[List[str]] = None,
+            verbose: bool = False,
+    ):
         self.num_threads = num_threads
         self.filter = filter
+        self.verbose = verbose
         self.session = requests.Session()
         self.session.headers.update({
             "Host": self.BASE_URL.split("//")[-1],
@@ -84,6 +91,9 @@ class HoerzuScraper:
         return channels
 
     def scrape_channel(self, channel_name: str, url: str):
+        if self.verbose:
+            printe(f"{current_thread().name}: {channel_name}")
+
         #soup = self.get_soup(url)
         # instead of channel url^ we request the ajax (html) api
         # to start at an early time
