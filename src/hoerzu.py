@@ -81,7 +81,7 @@ class HoerzuScraper:
             url = a.attrs["href"]
             if not self.filter or name in self.filter:
                 channels.append((name, url))
-        return channels[:8]
+        return channels
 
     def scrape_channel(self, channel_name: str, url: str):
         #soup = self.get_soup(url)
