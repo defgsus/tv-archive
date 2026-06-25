@@ -22,6 +22,7 @@ jobs:
       - name: update statistics
         run: |
           python main.py write-stats
+          python main.py write-index
       - name: git config user
         run: |
           curl -s -u ${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }} https://api.github.com/users/${GITHUB_ACTOR} > ${GITHUB_ACTOR}.json
