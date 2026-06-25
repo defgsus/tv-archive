@@ -1,14 +1,9 @@
 import { E } from "element";
 import {
-    STATE, display_error, display_spinner, render_program_items,
-    handle_search_change
+    STATE, display_error, display_spinner, render_program_items, strip_zero,
+    handle_date_select, handle_search_change
 } from "ui";
-
-export const DATA_HOST = (
-        window.location.host.startsWith("127.0.0.1") || window.location.host.startsWith("localhost")
-    )
-    ? "http://localhost:8001"
-    : "https://github.com/defgsus/tv-archive/raw/refs/heads/master/data";
+import { Component, ComponentMap } from "component";
 
 
 /** fetch program of a single date, store items in STATE.program_map */
@@ -17,11 +12,7 @@ export function fetch_program(date) {
 
     let [year, month, day] = date.split("-");
 
-    return fetch(`${DATA_HOST}/${year}/${month}/${year}-${month}-${day}.ndjson`)
-        .then(response => {
-            if (response.status >= 400) throw `${response.url}: status ${response.status}`;
-            return response;
-        })
+    return fetch(`./data/${year}/${month}/${year}-${month}-${day}.ndjson`)
         .then(response => response.text())
         .then(response => {
             const items = [];

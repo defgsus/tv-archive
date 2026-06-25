@@ -4,7 +4,6 @@ import {
     STATE, display_error, display_spinner, render_program_items, strip_zero,
     handle_date_select, handle_search_change
 } from "ui";
-import { DATA_HOST } from "program";
 
 
 function handle_index_file(data) {
@@ -33,11 +32,7 @@ function handle_index_file(data) {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    fetch(`${DATA_HOST}/index.json`)
-        .then(response => {
-            if (response.status >= 400) throw `${response.url}: status ${response.status}`;
-            return response;
-        })
+    fetch("./data/index.json")
         .then(response => response.json())
         .then(handle_index_file)
         .catch(error => display_error(error.toString()))
