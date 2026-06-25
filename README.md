@@ -2,6 +2,8 @@
 
 Scraped directly from a german webpage, started at about mid-January 2023.
 
+[webapp on github.io](https://defgsus.github.io/tv-archive/)
+
 TV is not as important anymore but still, archiving the decisions of which programs to run at what time
 becomes another puzzle piece in the revelation of mind-control.. 
 
@@ -18,6 +20,7 @@ Each entry looks like this:
   "length": 25,                     # minutes 
   "sub_title": "Serie", 
   "genre": "Erwachsenen-Animationsserie", 
+  "description": null,
   "season": 2, 
   "episode": 14, 
   "year": 1998, 
