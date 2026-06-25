@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TV-archive</title>
+    <meta name="description" content="Archive of (mostly) german TV program since 2023" />
+    <link rel="stylesheet" href="./assets/style.css">
+    <script type="importmap">
+        {
+          "imports": {
+            "element": "./assets/element.js",
+            "component": "./assets/component.js",
+            "ui": "./assets/ui.js",
+            "program": "./assets/program.js"
+          }
+        }
+    </script>
+    <script type="module" src="./assets/script.js"></script>
+</head>
+<body>
+    <div id="modal"></div>
+    <h1><a href="https://defgsus.github.io" target="_blank">defgsus.github.io</a> | TV-Archive</h1>
+
+    <div id="selects">
+        <div><label for="select-year">year</label><br><select id="select-year"></select></div>
+        <div><label for="select-month">month</label><br><select id="select-month"></select></div>
+        <div><label for="select-day">day</label><br><select id="select-day"></select></div>
+        <!--div class="divide"></div--->
+        <div hidden=""><label for="select-channel">channel</label><br><select id="select-channel"></select></div>
+        <div class="divide"></div>
+        <div><label for="input-search">search (regex)</label><br><input id="input-search"></input></div>
+        <div style="flex-grow: 10"></div>
+        <div id="spinner"></div>
+    </div>
+
+    <div id="channel-list"></div>
+
+    <hr>
+    <div id="error"></div>
+
+    <div id="program"></div>
+
+</body>
+</html>

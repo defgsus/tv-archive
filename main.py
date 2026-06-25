@@ -1,5 +1,6 @@
 import argparse
 import datetime
+import json
 from typing import Optional, List
 
 from tqdm import tqdm
@@ -16,7 +17,7 @@ def parse_args() -> dict:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "command", type=str,
-        choices=["scrape", "stats", "write-stats"],
+        choices=["scrape", "stats", "write-stats", "write-index"],
     )
     parser.add_argument(
         "-j", "--threads", type=int, default=1,
@@ -43,6 +44,9 @@ def main(command: str, verbose: bool, threads: int, filter: Optional[List[str]])
 
     elif command == "write-stats":
         write_stats(verbose=verbose)
+
+    elif command == "write-index":
+        write_index(verbose=verbose)
 
     else:
         printe(f"Invalid command '{command}'")
@@ -105,6 +109,19 @@ def write_stats(verbose: bool = False):
     readme += create_stats_str(verbose=verbose)
 
     (PROJECT_PATH / "README.md").write_text(readme)
+
+
+def write_index(verbose: bool = False):
+    all_dates = sorted(f.stem for f in DATA_PATH.rglob("*.ndjson"))
+
+    dates_map = {}
+    for date in all_dates:
+        year, month, day = date.split("-")
+        dates_map.setdefault(year, {}).setdefault(month, []).append(day)
+
+    (DATA_PATH / "index.json").write_text(json.dumps({
+        "date_map": dates_map,
+    }))
 
 
 if __name__ == "__main__":

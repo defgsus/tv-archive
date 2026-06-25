@@ -1,0 +1,137 @@
+:root {
+    --color: #000;
+    --color-bg: #fff;
+    --color-hl: #115;
+}
+
+@media (preferes-color-scheme: dark) {
+    :root {
+        --color: #fff;
+        --color-bg: #000;
+        --color-hl: #ddf;
+    }
+}
+
+body {
+    color: var(--color);
+    background: var(--color-bg);
+    font-family: sans-serif;
+}
+
+select, input {
+    color: var(--color);
+    background: var(--color-bg);
+}
+
+.error {
+    background-color: #fdd;
+    color: #400;
+    padding: 10px;
+}
+
+#spinner {
+    width: 31px;
+    height: 31px;
+    border: 5px solid transparent;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: spinner-rotation 1s linear infinite;
+    /*
+    doesn't properly display the spinner for some reason:
+    transition-property: border-top-color, border-right-color, border-left-color;
+    transition-duration: 1s;*/
+    &.visible {
+        border-top-color: var(--color);
+        border-right-color: var(--color);
+        border-left-color: var(--color);
+    }
+}
+
+#modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: color-mix(in hsl, var(--color), #8884 90%);
+    cursor: progress;
+    z-index: 100;
+    display: none;
+    &.visible {
+        display: unset;
+    }
+}
+
+@keyframes spinner-rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#selects {
+    display: flex;
+
+    div {
+        margin-right: 1rem;
+        &.divide {
+            border-left: 2px solid black;
+        }
+    }
+}
+
+.channel-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+.program-channels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .channel-column {
+        margin: 1rem;
+
+        .channel {
+            font-family: monospace;
+            font-size: 1.3rem;
+        }
+    }
+    /* hide channels that have only hidden items */
+    .channel-column:not(:has(.program-items .program-item:not([hidden=""]))) {
+        display: none;
+    }
+}
+
+
+.program-item {
+    cursor: pointer;
+    width: 30rem;
+
+    .header {
+        transition: color .2s;
+        &:hover {
+            color: var(--color-hl);
+        }
+    }
+
+    .time {
+        font-size: .8rem;
+    }
+
+    .item-detail {
+        margin-bottom: 1rem;
+
+        .detail-item {
+            margin-bottom: .2rem;
+        }
+    }
+}
