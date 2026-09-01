@@ -30,29 +30,29 @@ Each entry looks like this:
 
 ## Statistics
 
-**203** channels, **5,273,987** programs, **3,636,066** hours playtime between **2023-01-17** and **2026-08-31**
+**203** channels, **5,279,745** programs, **3,640,113** hours playtime between **2023-01-17** and **2026-09-01**
 
 
 ### playtime per genre (top 30)
 
-    995,394.6h 27.38% Serie
-    505,737.2h 13.91% Magazin
-    474,029.5h 13.04% Dokumentation
-    336,018.8h 9.24%  Spielfilm
-    299,019.7h 8.22%  Show
-    285,829.2h 7.86%  Sport
-    267,042.0h 7.34%  Werbung
-    195,610.1h 5.38%  Nachrichten
-    79,070.6h  2.17%  Musik
-    69,816.1h  1.92%  Reportage
-    41,540.3h  1.14%  Verschiedenes
-    22,167.7h  0.61%  Wetter
+    996,647.1h 27.38% Serie
+    506,249.2h 13.91% Magazin
+    474,616.5h 13.04% Dokumentation
+    336,371.3h 9.24%  Spielfilm
+    299,315.9h 8.22%  Show
+    286,230.3h 7.86%  Sport
+    267,249.1h 7.34%  Werbung
+    195,808.7h 5.38%  Nachrichten
+    79,143.3h  2.17%  Musik
+    69,895.9h  1.92%  Reportage
+    41,582.2h  1.14%  Verschiedenes
+    22,187.8h  0.61%  Wetter
     11,167.4h  0.31%  Programmende
-    9,850.0h   0.27%  Bericht
+    9,856.8h   0.27%  Bericht
     9,515.0h   0.26%  E-Sport
-    9,041.0h   0.25%  Event
-    7,908.2h   0.22%  Videoclip
-    7,240.5h   0.20%  Kurzfilm
+    9,047.6h   0.25%  Event
+    7,919.2h   0.22%  Videoclip
+    7,241.9h   0.20%  Kurzfilm
     3,541.9h   0.10%  *unknown*
     2,045.6h   0.06%  Verkaufsshow
     353.9h     0.01%  Eishockey
