@@ -30,29 +30,29 @@ Each entry looks like this:
 
 ## Statistics
 
-**210** channels, **5,515,345** programs, **3,809,838** hours playtime between **2023-01-17** and **2026-10-13**
+**210** channels, **5,521,173** programs, **3,813,990** hours playtime between **2023-01-17** and **2026-10-14**
 
 
 ### playtime per genre (top 30)
 
-    1,046,468.9h 27.47% Serie
-    527,001.9h   13.83% Magazin
-    499,047.5h   13.10% Dokumentation
-    353,793.9h   9.29%  Spielfilm
-    312,665.7h   8.21%  Show
-    303,978.2h   7.98%  Sport
-    276,023.8h   7.25%  Werbung
-    203,530.8h   5.34%  Nachrichten
-    82,171.1h    2.16%  Musik
-    72,931.8h    1.91%  Reportage
-    43,182.8h    1.13%  Verschiedenes
-    22,958.9h    0.60%  Wetter
+    1,047,721.4h 27.47% Serie
+    527,541.9h   13.83% Magazin
+    499,635.0h   13.10% Dokumentation
+    354,174.7h   9.29%  Spielfilm
+    312,986.3h   8.21%  Show
+    304,396.1h   7.98%  Sport
+    276,240.8h   7.24%  Werbung
+    203,733.5h   5.34%  Nachrichten
+    82,256.9h    2.16%  Musik
+    72,998.1h    1.91%  Reportage
+    43,221.1h    1.13%  Verschiedenes
+    22,977.7h    0.60%  Wetter
     11,167.4h    0.29%  Programmende
-    10,274.0h    0.27%  Bericht
+    10,282.5h    0.27%  Bericht
     9,515.0h     0.25%  E-Sport
-    9,383.9h     0.25%  Event
-    8,353.8h     0.22%  Videoclip
-    7,320.8h     0.19%  Kurzfilm
+    9,386.2h     0.25%  Event
+    8,365.6h     0.22%  Videoclip
+    7,321.9h     0.19%  Kurzfilm
     3,541.9h     0.09%  *unknown*
     2,045.6h     0.05%  Verkaufsshow
     353.9h       0.01%  Eishockey
@@ -61,7 +61,7 @@ Each entry looks like this:
     232.8h       0.01%  Handball
     219.5h       0.01%  Dokureihe
     212.4h       0.01%  Leichtathletik
-    190.7h       0.01%  Gespräch
+    190.7h       0.00%  Gespräch
     169.7h       0.00%  Erotikfilm
     157.3h       0.00%  Fußball
     147.0h       0.00%  Wirtschaftsmagazin
